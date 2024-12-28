@@ -3,6 +3,8 @@ using Content.Server.Audio;
 using Content.Server.Power.Components;
 using Content.Server.Power.EntitySystems;
 using Content.Server.Shuttles.Components;
+using Content.Server.Sound;
+using Content.Shared.Audio;
 using Content.Shared.Damage;
 using Content.Shared.Examine;
 using Content.Shared.Interaction;
@@ -10,6 +12,9 @@ using Content.Shared.Maps;
 using Content.Shared.Physics;
 using Content.Shared.Shuttles.Components;
 using Content.Shared.Temperature;
+using Robust.Shared.Audio;
+using Robust.Shared.Audio.Components;
+using Robust.Shared.Audio.Systems;
 using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Physics.Collision.Shapes;
@@ -35,6 +40,7 @@ public sealed class ThrusterSystem : EntitySystem
     [Dependency] private readonly DamageableSystem _damageable = default!;
     [Dependency] private readonly SharedPointLightSystem _light = default!;
     [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
+    [Dependency] private readonly SharedAudioSystem _audio = default!;
 
     // Essentially whenever thruster enables we update the shuttle's available impulses which are used for movement.
     // This is done for each direction available.
@@ -271,8 +277,13 @@ public sealed class ThrusterSystem : EntitySystem
 
     private void OnThrusterInit(EntityUid uid, ThrusterComponent component, ComponentInit args)
     {
+<<<<<<< HEAD
         if (TryComp<ApcPowerReceiverComponent>(uid, out var apcPower) && component.OriginalLoad == 0) { component.OriginalLoad = apcPower.Load; } // Frontier
 
+=======
+        if (component.SoundCycle != null)
+            _ambient.SetSound(uid, component.SoundCycle, EnsureComp<AmbientSoundComponent>(uid));
+>>>>>>> r1remote/master
         _ambient.SetAmbience(uid, false);
 
         if (!component.Enabled)
@@ -360,7 +371,6 @@ public sealed class ThrusterSystem : EntitySystem
             _light.SetEnabled(uid, true, pointLightComponent);
         }
 
-        _ambient.SetAmbience(uid, true);
         RefreshCenter(uid, shuttleComponent);
     }
 
@@ -449,8 +459,6 @@ public sealed class ThrusterSystem : EntitySystem
             _light.SetEnabled(uid, false, pointLightComponent);
         }
 
-        _ambient.SetAmbience(uid, false);
-
         if (EntityManager.TryGetComponent(uid, out PhysicsComponent? physicsComponent))
         {
             _fixtureSystem.DestroyFixture(uid, BurnFixture, body: physicsComponent);
@@ -532,6 +540,25 @@ public sealed class ThrusterSystem : EntitySystem
         component.Colliding.Remove(args.OtherEntity);
     }
 
+    private void SetThrusterFiring(EntityUid uid, ThrusterComponent component, bool value)
+    {
+        if (component.Firing == value)
+            return;
+        component.Firing = value;
+
+        _appearance.SetData(uid, ThrusterVisualState.Thrusting, value);
+        _ambient.SetAmbience(uid, value);
+
+        bool recentFire = (_timing.CurTime - component.LastFire).TotalSeconds < 0.5;
+        component.LastFire = _timing.CurTime;
+        if (recentFire)
+            return;
+
+        _audio.Stop(component.AudioUid);
+        SoundSpecifier? sound = value ? component.SoundSpinup : component.SoundShutdown;
+        component.AudioUid = _audio.PlayPredicted(sound, uid, null)?.Entity;
+    }
+
     /// <summary>
     /// Considers a thrust direction as being active.
     /// </summary>
@@ -543,7 +570,6 @@ public sealed class ThrusterSystem : EntitySystem
         component.ThrustDirections |= direction;
 
         var index = GetFlagIndex(direction);
-        var appearanceQuery = GetEntityQuery<AppearanceComponent>();
         var thrusterQuery = GetEntityQuery<ThrusterComponent>();
 
         foreach (var uid in component.LinearThrusters[index])
@@ -551,9 +577,7 @@ public sealed class ThrusterSystem : EntitySystem
             if (!thrusterQuery.TryGetComponent(uid, out var comp))
                 continue;
 
-            comp.Firing = true;
-            appearanceQuery.TryGetComponent(uid, out var appearance);
-            _appearance.SetData(uid, ThrusterVisualState.Thrusting, true, appearance);
+            SetThrusterFiring(uid, comp, true);
         }
     }
 
@@ -568,7 +592,6 @@ public sealed class ThrusterSystem : EntitySystem
         component.ThrustDirections &= ~direction;
 
         var index = GetFlagIndex(direction);
-        var appearanceQuery = GetEntityQuery<AppearanceComponent>();
         var thrusterQuery = GetEntityQuery<ThrusterComponent>();
 
         foreach (var uid in component.LinearThrusters[index])
@@ -576,9 +599,7 @@ public sealed class ThrusterSystem : EntitySystem
             if (!thrusterQuery.TryGetComponent(uid, out var comp))
                 continue;
 
-            appearanceQuery.TryGetComponent(uid, out var appearance);
-            comp.Firing = false;
-            _appearance.SetData(uid, ThrusterVisualState.Thrusting, false, appearance);
+            SetThrusterFiring(uid, comp, false);
         }
     }
 
@@ -594,7 +615,6 @@ public sealed class ThrusterSystem : EntitySystem
 
     public void SetAngularThrust(ShuttleComponent component, bool on)
     {
-        var appearanceQuery = GetEntityQuery<AppearanceComponent>();
         var thrusterQuery = GetEntityQuery<ThrusterComponent>();
 
         if (on)
@@ -604,9 +624,7 @@ public sealed class ThrusterSystem : EntitySystem
                 if (!thrusterQuery.TryGetComponent(uid, out var comp))
                     continue;
 
-                appearanceQuery.TryGetComponent(uid, out var appearance);
-                comp.Firing = true;
-                _appearance.SetData(uid, ThrusterVisualState.Thrusting, true, appearance);
+                SetThrusterFiring(uid, comp, true);
             }
         }
         else
@@ -616,9 +634,7 @@ public sealed class ThrusterSystem : EntitySystem
                 if (!thrusterQuery.TryGetComponent(uid, out var comp))
                     continue;
 
-                appearanceQuery.TryGetComponent(uid, out var appearance);
-                comp.Firing = false;
-                _appearance.SetData(uid, ThrusterVisualState.Thrusting, false, appearance);
+                SetThrusterFiring(uid, comp, false);
             }
         }
     }

@@ -3,6 +3,8 @@ using Content.Shared.Dataset;
 using Robust.Shared.Random;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Enums;
+using Robust.Shared.Configuration;
+using Content.Shared.CCVar;
 
 namespace Content.Shared.Humanoid
 {
@@ -13,6 +15,7 @@ namespace Content.Shared.Humanoid
     {
         [Dependency] private readonly IRobustRandom _random = default!;
         [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
+        [Dependency] private readonly IConfigurationManager _cfg = default!;
 
         public string GetName(string species, Gender? gender = null)
         {
@@ -36,7 +39,7 @@ namespace Content.Shared.Humanoid
                 // End of Nyano - Summary: for Oni naming
                 case SpeciesNaming.TheFirstofLast:
                     return Loc.GetString("namepreset-thefirstoflast",
-                        ("first", GetFirstName(speciesProto, gender)), ("last", GetLastName(speciesProto)));
+                        ("first", GetFirstName(speciesProto, gender)), ("last", GetLastName(speciesProto, gender))); // Corvax-LastnameGender
                 case SpeciesNaming.FirstDashFirst:
                     return Loc.GetString("namepreset-firstdashfirst",
                         ("first1", GetFirstName(speciesProto, gender)), ("first2", GetFirstName(speciesProto, gender)));
@@ -46,29 +49,44 @@ namespace Content.Shared.Humanoid
                 case SpeciesNaming.FirstLast:
                 default:
                     return Loc.GetString("namepreset-firstlast",
-                        ("first", GetFirstName(speciesProto, gender)), ("last", GetLastName(speciesProto)));
+                        ("first", GetFirstName(speciesProto, gender)), ("last", GetLastName(speciesProto, gender))); // Corvax-LastnameGender
             }
         }
 
         public string GetFirstName(SpeciesPrototype speciesProto, Gender? gender = null)
         {
+            var localePreffix = _cfg.GetCVar(CCVars.CultureLocale) == "en-US" ? "_en" : "_ru";
             switch (gender)
             {
                 case Gender.Male:
-                    return _random.Pick(_prototypeManager.Index<DatasetPrototype>(speciesProto.MaleFirstNames).Values);
+                    return _random.Pick(_prototypeManager.Index<DatasetPrototype>(speciesProto.MaleFirstNames + localePreffix).Values);
                 case Gender.Female:
-                    return _random.Pick(_prototypeManager.Index<DatasetPrototype>(speciesProto.FemaleFirstNames).Values);
+                    return _random.Pick(_prototypeManager.Index<DatasetPrototype>(speciesProto.FemaleFirstNames + localePreffix).Values);
                 default:
                     if (_random.Prob(0.5f))
-                        return _random.Pick(_prototypeManager.Index<DatasetPrototype>(speciesProto.MaleFirstNames).Values);
+                        return _random.Pick(_prototypeManager.Index<DatasetPrototype>(speciesProto.MaleFirstNames + localePreffix).Values);
                     else
-                        return _random.Pick(_prototypeManager.Index<DatasetPrototype>(speciesProto.FemaleFirstNames).Values);
+                        return _random.Pick(_prototypeManager.Index<DatasetPrototype>(speciesProto.FemaleFirstNames + localePreffix).Values);
             }
         }
 
-        public string GetLastName(SpeciesPrototype speciesProto)
+        // Corvax-LastnameGender-Start: Added custom gender split logic
+        public string GetLastName(SpeciesPrototype speciesProto, Gender? gender = null)
         {
-            return _random.Pick(_prototypeManager.Index<DatasetPrototype>(speciesProto.LastNames).Values);
+            var localePreffix = _cfg.GetCVar(CCVars.CultureLocale) == "en-US" ? "_en" : "_ru";
+            switch (gender)
+            {
+                case Gender.Male:
+                    return _random.Pick(_prototypeManager.Index<DatasetPrototype>(speciesProto.MaleLastNames + localePreffix).Values);
+                case Gender.Female:
+                    return _random.Pick(_prototypeManager.Index<DatasetPrototype>(speciesProto.FemaleLastNames + localePreffix).Values);
+                default:
+                    if (_random.Prob(0.5f))
+                        return _random.Pick(_prototypeManager.Index<DatasetPrototype>(speciesProto.MaleLastNames + localePreffix).Values);
+                    else
+                        return _random.Pick(_prototypeManager.Index<DatasetPrototype>(speciesProto.FemaleLastNames + localePreffix).Values);
+            }
         }
+        // Corvax-LastnameGender-End
     }
 }

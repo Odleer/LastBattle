@@ -150,6 +150,8 @@ namespace Content.Shared.Roles
         [DataField("extendedAccess")]
         public IReadOnlyCollection<ProtoId<AccessLevelPrototype>> ExtendedAccess { get; private set; } = Array.Empty<ProtoId<AccessLevelPrototype>>();
 
+        [DataField("alwaysShowInLatejoin")]
+        public bool AlwaysShowInLatejoin = false;
         [DataField("extendedAccessGroups")]
         public IReadOnlyCollection<ProtoId<AccessGroupPrototype>> ExtendedAccessGroups { get; private set; } = Array.Empty<ProtoId<AccessGroupPrototype>>();
 

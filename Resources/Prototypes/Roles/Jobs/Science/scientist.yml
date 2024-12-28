@@ -5,8 +5,14 @@
   playTimeTracker: JobScientist
   setPreference: false # Frontier
   requirements:
+<<<<<<< HEAD
     - !type:OverallPlaytimeRequirement
       time: 10800
+=======
+    - !type:DepartmentTimeRequirement
+      department: Science
+      time: 18000 #5 hrs # Corvax-RoleTime
+>>>>>>> r1remote/master
   startingGear: ScientistGear
   icon: "JobIconScientist"
   supervisors: job-supervisors-hire # Frontier

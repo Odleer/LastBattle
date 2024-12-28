@@ -6,6 +6,7 @@
   canBeAntag: false
   icon: JobIconVisitor
   setPreference: false
+<<<<<<< HEAD
 #  overrideConsoleVisibility: true # Frontier
   accessGroups: # Frontier
   - GeneralAccess # Frontier
@@ -13,3 +14,8 @@
   # - Maintenance # Frontier
   # extendedAccess: # Frontier
   # - External # Frontier
+=======
+  overrideConsoleVisibility: true
+#  access: # Corvax-MRP
+#  - Maintenance
+>>>>>>> r1remote/master

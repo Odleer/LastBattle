@@ -17,8 +17,14 @@
 "Map-Outpost":
 - changed-files:
   - any-glob-to-any-file:
+<<<<<<< HEAD
     - "Resources/Maps/_NF/Outpost/*.yml" # Map Files
     - "Resources/Prototypes/_MF/Maps/Outpost/*.yml" # Prototypes Files
+=======
+    - 'Resources/Maps/*.yml'
+    - 'Resources/Prototypes/Maps/*.yml'
+    - 'Resources/Prototypes/Corvax/Maps/*.yml'
+>>>>>>> r1remote/master
 
 "Map-Shuttle":
 - changed-files:
@@ -53,6 +59,10 @@
 "Audio":
 - changed-files:
   - any-glob-to-any-file: '**/*.ogg'
+
+"Changes: Localization":
+- changed-files:
+  - any-glob-to-any-file: 'Resources/Locale/**/*.ftl'
 
 "No C#":
 - changed-files:

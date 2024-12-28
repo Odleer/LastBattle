@@ -122,7 +122,12 @@
   - type: Grammar
     attributes:
       gender: male
+<<<<<<< HEAD
   - type: Sharp
+=======
+  - type: TTS # Corvax-TTS
+    voice: Rat
+>>>>>>> r1remote/master
 
 - type: entity
   id: MobRatKingBuff

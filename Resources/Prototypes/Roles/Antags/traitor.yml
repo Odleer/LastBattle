@@ -4,7 +4,14 @@
   antagonist: true
   setPreference: false # Frontier: true<false
   objective: roles-antag-syndicate-agent-objective
+<<<<<<< HEAD
   # guides: [ Traitors ] # Frontier: removed, irrelevant
+=======
+  guides: [ Traitors ]
+  requirements:
+  - !type:OverallPlaytimeRequirement
+    time: 108000 # 30h # Corvax-RoleTime
+>>>>>>> r1remote/master
 
 - type: antag
   id: TraitorSleeper

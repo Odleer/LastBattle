@@ -25,10 +25,31 @@
   suffix: Filled
   parent: LockerQuarterMaster
   components:
+<<<<<<< HEAD
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:NestedSelector
         tableId: LockerFillQuarterMaster
+=======
+  - type: StorageFill
+    contents:
+      - id: BoxFolderQmClipboard
+      - id: CargoRequestComputerCircuitboard
+      - id: CargoSaleComputerCircuitboard
+      - id: CargoShuttleComputerCircuitboard
+      - id: CargoShuttleConsoleCircuitboard
+      - id: SalvageShuttleConsoleCircuitboard
+      - id: CargoBountyComputerCircuitboard
+      - id: CigPackGreen
+        prob: 0.50
+      - id: DoorRemoteCargo
+      - id: RubberStampQm
+      - id: RubberStampDenied
+      - id: RubberStampApproved
+      - id: ClothingHeadsetAltCargo
+      - id: BoxEncryptionKeyCargo
+      - id: PrinterDocFlatpack # Corvax-Printer
+>>>>>>> r1remote/master
 
 # No laser table
 - type: entityTable
@@ -53,6 +74,7 @@
 #    - id: WeaponDisabler # Frontier
 #    - id: ClothingEyesGlassesCommand # Frontier
 
+<<<<<<< HEAD
 # No laser table + Laser table
 - type: entityTable
   id: LockerFillCaptainLaser
@@ -61,6 +83,37 @@
     - !type:NestedSelector
       tableId: LockerFillCaptainNoLaser
 #    - id: WeaponAntiqueLaser # Frontier
+=======
+- type: entity
+  id: LockerCaptainFilled
+  suffix: Filled, AntiqueLaser
+  parent: LockerCaptain
+  components:
+  - type: StorageFill
+    contents:
+      - id: ClothingOuterArmorCaptainCarapace
+      - id: NukeDisk
+      - id: PinpointerNuclear
+      - id: CaptainIDCard
+      - id: WeaponDisabler
+      - id: CommsComputerCircuitboard
+      - id: ClothingHeadsetAltCommand
+      - id: SpaceCash1000
+      - id: PlushieNuke
+        prob: 0.1
+      - id: CigarGoldCase
+        prob: 0.25
+      - id: ClothingBeltSheathFilled
+      - id: DoorRemoteCommand
+      - id: RubberStampCaptain
+      - id: WeaponAntiqueLaser
+      - id: JetpackCaptainFilled
+      - id: MedalCase
+      # Corvax-Resprite-Start
+      - id: ClothingHeadCaptainHat
+      - id: ClothingOuterCoatCaptain
+      # Corvax-Resprite-End
+>>>>>>> r1remote/master
 
 # Hardsuit table, used for suit storage as well
 - type: entityTable
@@ -143,10 +196,38 @@
   suffix: Filled
   parent: LockerHeadOfPersonnel
   components:
+<<<<<<< HEAD
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:NestedSelector
         tableId: LockerFillHeadOfPersonnel
+=======
+  - type: StorageFill
+    contents:
+      - id: HoPIDCard
+      - id: ClothingHeadsetCommand
+      - id: BoxPDA
+      - id: BoxID
+      - id: BoxHeadset
+      - id: IDComputerCircuitboard
+      - id: WeaponDisabler
+      - id: CigarGoldCase
+        prob: 0.25
+        # Fuck the HoP they don't deserve fucking cigars.
+        # Yes they do fuck you.
+      - id: DoorRemoteService
+      - id: ClothingNeckGoldmedal
+      - id: RubberStampHop
+      - id: RubberStampDenied
+      - id: RubberStampApproved
+      - id: BoxEncryptionKeyPassenger
+      - id: BoxEncryptionKeyService
+      - id: ClothingBackpackIan
+        prob: 0.5
+      - id: ClothingOuterCoatHOP # Corvax-Resprite
+      - id: AccessConfigurator
+      - id: PrinterDocFlatpack # Corvax-Printer
+>>>>>>> r1remote/master
 
 # No hardsuit table
 - type: entityTable
@@ -312,6 +393,7 @@
   suffix: Filled, Hardsuit
   parent: LockerResearchDirector
   components:
+<<<<<<< HEAD
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:AllSelector
@@ -320,6 +402,36 @@
           tableId: LockerFillResearchDirectorNoHardsuit
         - !type:NestedSelector
           tableId: FillResearchDirectorHardsuit
+=======
+  - type: StorageFill
+    contents:
+      - id: WeaponDisabler
+      - id: ClothingHeadHatCapHoS # Corvax-SecFashion
+        prob: 0.5
+      - id: ClothingOuterCoatHoSTrench
+      - id: ClothingMaskNeckGaiter
+      - id: ClothingOuterCoatHoSGreatcoat # Corvax-Resprite
+      - id: ClothingOuterHardsuitSecurityRed
+      - id: ClothingMaskGasSwat
+#      - id: ClothingShoeSlippersDuck # Corvax-Resprite: Need more space for style
+#        prob: 0.2
+      - id: DrinkVacuumFlask
+        prob: 0.8
+      - id: ClothingBeltSecurityFilled
+      - id: ClothingHeadsetAltSecurity
+      - id: ClothingEyesGlassesSecurity
+      - id: ClothingShoesBootsJack
+      - id: CigarGoldCase
+        prob: 0.50
+      - id: DoorRemoteSecurity
+      - id: RubberStampHos
+      - id: SecurityTechFabCircuitboard
+      - id: JetpackSecurityFilled
+      - id: BoxEncryptionKeySecurity
+      - id: HoloprojectorSecurity
+      - id: BookSecretDocuments
+      - id: BookBusido # Corvax-Books
+>>>>>>> r1remote/master
 
 # No hardsuit table
 - type: entityTable
@@ -371,6 +483,7 @@
   suffix: Filled
   parent: LockerHeadOfSecurity
   components:
+<<<<<<< HEAD
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:NestedSelector
@@ -390,6 +503,28 @@
           tableId: LockerFillHeadOfSecurityNoHardsuit
         - !type:NestedSelector
           tableId: FillHeadOfSecurityHardsuit
+=======
+  - type: StorageFill
+    contents:
+      - id: WeaponDisabler
+      - id: ClothingHeadHatCapHoS # Corvax-SecFashion
+        prob: 0.5
+      - id: ClothingOuterCoatHoSTrench
+      - id: ClothingMaskNeckGaiter
+      - id: ClothingOuterCoatHoSGreatcoat # Corvax-Resprite
+      - id: ClothingBeltSecurityFilled
+      - id: ClothingHeadsetAltSecurity
+      - id: ClothingEyesGlassesSecurity
+      - id: ClothingShoesBootsJack
+      - id: CigarGoldCase
+        prob: 0.50
+      - id: DoorRemoteSecurity
+      - id: RubberStampHos
+      - id: SecurityTechFabCircuitboard
+      - id: BoxEncryptionKeySecurity
+      - id: HoloprojectorSecurity
+      - id: BookSecretDocuments
+>>>>>>> r1remote/master
 
 - type: entity
   id: LockerFreezerVaultFilled

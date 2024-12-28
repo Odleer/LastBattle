@@ -12,11 +12,28 @@
     ClothingUniformJumpsuitLawyerGood: 1
     ClothingUniformJumpskirtLawyerGood: 1
     ClothingShoesBootsLaceup: 2
+<<<<<<< HEAD
 #    ClothingHeadsetService: 2 # Frontier
+=======
+    ClothingHeadsetIAA: 2 # Corvax-IAA
+>>>>>>> r1remote/master
     ClothingNeckLawyerbadge: 2
     RubberStampLawyer: 2
     BriefcaseBrown: 2
+<<<<<<< HEAD
     HyperlinkBookSpaceLaw: 3 # Frontier: BookSpaceLaw<HyperlinkBookSpaceLaw
+=======
+    # Corvax-LawyerDrip-Start
+    ClothingHandsGlovesColorWhite: 1
+    ClothingHandsGlovesColorGray: 1
+    ClothingHandsGlovesColorBlack: 1
+    ClothingHandsGlovesColorRed: 1
+    ClothingHandsGlovesColorBlue: 1
+    ClothingHeadHatBowlerHat: 1
+    ClothingHeadHatOutlawHat: 1
+    ClothingHeadHatTophat: 1
+    # Corvax-LawyerDrip-End
+>>>>>>> r1remote/master
     LuxuryPen: 2
     HandLabeler: 2
   contrabandInventory:

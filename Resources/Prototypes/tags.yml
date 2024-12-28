@@ -694,6 +694,9 @@
 
 - type: Tag
   id: GPS
+- type: Tag
+  id: Gourd # tikvyak!!!
+
 
 - type: Tag
   id: Grenade
@@ -1004,6 +1007,9 @@
 
 - type: Tag
   id: NukeOpsUplink
+
+- type: Tag
+  id: ShipEventUplink
 
 - type: Tag
   id: Ointment

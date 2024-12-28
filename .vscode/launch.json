@@ -51,6 +51,7 @@
             ],
             "preLaunchTask": "build"
         },
+<<<<<<< HEAD
         // Frontier begin
         {
             "name": "Server/Client (Release)",
@@ -59,6 +60,23 @@
                 "Client"
             ],
             "preLaunchTask": "build-release"
+=======
+        {
+            "name": "Server/Compat Client",
+            "configurations": [
+                "Server",
+                "Client (Compatibility renderer)"
+            ],
+            "preLaunchTask": "build"
+        },
+        {
+            "name": "Server/Two clients",
+            "configurations": [
+                "Server",
+                "Client",
+                "Client"
+            ]
+>>>>>>> r1remote/master
         }
         // Frontier end
     ]

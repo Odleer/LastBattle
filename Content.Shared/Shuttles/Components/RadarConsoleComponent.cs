@@ -1,3 +1,4 @@
+using Content.Shared.Shuttles.BUIStates;
 using Content.Shared.Shuttles.Systems;
 using Robust.Shared.GameStates;
 
@@ -39,4 +40,7 @@ public sealed partial class RadarConsoleComponent : Component
     [DataField]
     public bool HideCoords = false;
     // End Frontier
+
+    [DataField("trackedGroups")]
+    public Enum TrackedGroups = RadarRenderableGroup.All;
 }

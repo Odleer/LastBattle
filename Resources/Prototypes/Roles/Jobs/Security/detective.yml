@@ -4,9 +4,15 @@
   description: job-description-detective
   playTimeTracker: JobDetectiveOld
   requirements:
+<<<<<<< HEAD
     - !type:DepartmentTimeRequirement
       department: Security
       time: 54000 # 15 hours
+=======
+  - !type:DepartmentTimeRequirement
+    department: Security
+    time: 72000 #20 hrs # Corvax-RoleTime
+>>>>>>> r1remote/master
   startingGear: DetectiveGear
   icon: "JobIconDetective"
   supervisors: job-supervisors-hos

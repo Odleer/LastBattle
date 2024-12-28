@@ -1,4 +1,4 @@
-using Robust.Shared.Map;
+﻿using Robust.Shared.Map;
 using Robust.Shared.Serialization;
 using Content.Shared._NF.Shuttles.Events; // Frontier - InertiaDampeningMode access
 
@@ -52,10 +52,4 @@ public sealed class NavInterfaceState
         Docks = docks;
         DampeningMode = dampeningMode; // Frontier
     }
-}
-
-[Serializable, NetSerializable]
-public enum RadarConsoleUiKey : byte
-{
-    Key
 }

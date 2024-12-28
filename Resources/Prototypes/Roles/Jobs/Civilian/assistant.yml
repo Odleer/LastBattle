@@ -6,9 +6,15 @@
   setPreference: false # Frontier
   startingGear: PassengerGear
   icon: "JobIconPassenger"
+<<<<<<< HEAD
 #  supervisors: job-supervisors-everyone
   accessGroups: # Frontier
   - GeneralAccess # Frontier
+=======
+  supervisors: job-supervisors-everyone
+#  access: # Corvax-MRP
+#  - Maintenance
+>>>>>>> r1remote/master
 
 - type: startingGear
   id: PassengerGear

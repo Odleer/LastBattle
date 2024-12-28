@@ -6,8 +6,12 @@
   - Forensics
 #  - Defusal # Frontier - largely irrelevant
   - CriminalRecords
+<<<<<<< HEAD
 #  - SpaceLaw # Frontier - irrelevant
   - Smuggling # Frontier
+=======
+  # - SpaceLaw # TODO вернуть когда закон будет адаптирован под корвакс
+>>>>>>> r1remote/master
 
 - type: guideEntry
   id: Forensics

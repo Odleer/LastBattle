@@ -5,8 +5,14 @@
   playTimeTracker: JobChemist
   setPreference: false # Frontier
   requirements:
+<<<<<<< HEAD
     - !type:OverallPlaytimeRequirement
       time: 10800
+=======
+    - !type:DepartmentTimeRequirement
+      department: Medical
+      time: 18000 #5 hrs # Corvax-RoleTime
+>>>>>>> r1remote/master
   startingGear: ChemistGear
   icon: "JobIconChemist"
   supervisors: job-supervisors-hire # Frontier

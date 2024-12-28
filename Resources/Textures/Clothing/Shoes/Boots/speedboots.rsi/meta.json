@@ -1,7 +1,11 @@
 {
   "version": 1,
   "license": "CC0-1.0",
+<<<<<<< HEAD
   "copyright": "Created by EmoGarbage404. Vox states made by Flareguy, modified from magboots.rsi",
+=======
+  "copyright": "Created by EmoGarbage404, fix digi sprites by DreamlyJack",
+>>>>>>> r1remote/master
   "size": {
     "x": 32,
     "y": 32
@@ -16,11 +20,19 @@
       "directions": 4
     },
     {
+<<<<<<< HEAD
       "name": "equipped-FEET-vox",
       "directions": 4
     },
     {
       "name": "on-equipped-FEET-vox",
+=======
+      "name": "equipped-FEET-reptilian",
+      "directions": 4
+    },
+    {
+      "name": "on-equipped-FEET-reptilian",
+>>>>>>> r1remote/master
       "directions": 4
     },
     {

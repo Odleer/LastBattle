@@ -22,6 +22,8 @@ public sealed partial class ShuttleConsoleWindow : FancyWindow,
 
     public event Action<NetEntity, NetEntity>? DockRequest;
     public event Action<NetEntity>? UndockRequest;
+    public event Action<string>? ChangeNamePressed;
+
 
     public ShuttleConsoleWindow()
     {
@@ -63,7 +65,14 @@ public sealed partial class ShuttleConsoleWindow : FancyWindow,
             UndockRequest?.Invoke(entity);
         };
 
+<<<<<<< HEAD
         NfInitialize(); // Frontier Initialization for the ShuttleConsoleWindow
+=======
+        NavContainer.ChangeNamePressed += str =>
+        {
+            ChangeNamePressed?.Invoke(str);
+        };
+>>>>>>> r1remote/master
     }
 
     private void ClearModes(ShuttleConsoleMode mode)

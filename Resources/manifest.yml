@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 ﻿defaultWindowTitle: Frontier Station
 windowIconSet: /Textures/Logo/icon
 splashLogo: /Textures/Logo/logo.png
+=======
+﻿defaultWindowTitle: Theta Station
+windowIconSet: /Textures/Logo/icon-theta # Theta
+splashLogo: /Textures/Logo/logo-theta.png # Theta
+>>>>>>> r1remote/master
 
 # PJB PLEASE

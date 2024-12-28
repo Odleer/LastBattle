@@ -2,6 +2,7 @@
 - type: roleLoadout
   id: JobCaptain
   groups:
+  - Inventory # Corvax-Loadouts
   - CaptainHead
   - CaptainNeck
   - CaptainJumpsuit
@@ -14,7 +15,11 @@
 - type: roleLoadout
   id: JobHeadOfPersonnel
   groups:
+<<<<<<< HEAD
   - GroupTankHarness
+=======
+  - Inventory # Corvax-Loadouts
+>>>>>>> r1remote/master
   - HoPHead
   - HoPNeck
   - HoPJumpsuit
@@ -34,7 +39,11 @@
 - type: roleLoadout
   id: JobPassenger
   groups:
+<<<<<<< HEAD
   - GroupTankHarness
+=======
+  - Inventory # Corvax-Loadouts
+>>>>>>> r1remote/master
   - PassengerJumpsuit
   - CommonBackpack
   - PassengerNeck
@@ -50,7 +59,11 @@
 - type: roleLoadout
   id: JobBartender
   groups:
+<<<<<<< HEAD
   - GroupTankHarness
+=======
+  - Inventory # Corvax-Loadouts
+>>>>>>> r1remote/master
   - BartenderHead
   - BartenderJumpsuit
   - CommonBackpack
@@ -63,7 +76,11 @@
 - type: roleLoadout
   id: JobServiceWorker
   groups:
+<<<<<<< HEAD
   - GroupTankHarness
+=======
+  - Inventory # Corvax-Loadouts
+>>>>>>> r1remote/master
   - BartenderJumpsuit
   - CommonBackpack
   - Glasses
@@ -74,7 +91,11 @@
 - type: roleLoadout
   id: JobChef
   groups:
+<<<<<<< HEAD
   - GroupTankHarness
+=======
+  - Inventory # Corvax-Loadouts
+>>>>>>> r1remote/master
   - ChefHead
   - ChefMask
   - ChefJumpsuit
@@ -88,7 +109,11 @@
 - type: roleLoadout
   id: JobLibrarian
   groups:
+<<<<<<< HEAD
   - GroupTankHarness
+=======
+  - Inventory # Corvax-Loadouts
+>>>>>>> r1remote/master
   - LibrarianJumpsuit
   - CommonBackpack
   - Glasses
@@ -99,7 +124,11 @@
 - type: roleLoadout
   id: JobLawyer
   groups:
+<<<<<<< HEAD
   - GroupTankHarness
+=======
+  - Inventory # Corvax-Loadouts
+>>>>>>> r1remote/master
   - LawyerNeck
   - LawyerJumpsuit
   - CommonBackpack
@@ -111,7 +140,11 @@
 - type: roleLoadout
   id: JobChaplain
   groups:
+<<<<<<< HEAD
   - GroupTankHarness
+=======
+  - Inventory # Corvax-Loadouts
+>>>>>>> r1remote/master
   - ChaplainHead
   - ChaplainMask
   - ChaplainNeck
@@ -126,7 +159,11 @@
 - type: roleLoadout
   id: JobJanitor
   groups:
+<<<<<<< HEAD
   - GroupTankHarness
+=======
+  - Inventory # Corvax-Loadouts
+>>>>>>> r1remote/master
   - JanitorHead
   - JanitorJumpsuit
   - JanitorGloves
@@ -141,7 +178,11 @@
 - type: roleLoadout
   id: JobBotanist
   groups:
+<<<<<<< HEAD
   - GroupTankHarness
+=======
+  - Inventory # Corvax-Loadouts
+>>>>>>> r1remote/master
   - BotanistHead
   - BotanistJumpsuit
   - BotanistBackpack
@@ -154,7 +195,11 @@
 - type: roleLoadout
   id: JobClown
   groups:
+<<<<<<< HEAD
   - GroupTankHarness
+=======
+  - Inventory # Corvax-Loadouts
+>>>>>>> r1remote/master
   - ClownHead
   - ClownJumpsuit
   - ClownBackpack
@@ -167,7 +212,11 @@
 - type: roleLoadout
   id: JobMime
   groups:
+<<<<<<< HEAD
   - GroupTankHarness
+=======
+  - Inventory # Corvax-Loadouts
+>>>>>>> r1remote/master
   - MimeHead
   - MimeMask
   - MimeJumpsuit
@@ -181,7 +230,11 @@
 - type: roleLoadout
   id: JobMusician
   groups:
+<<<<<<< HEAD
   - GroupTankHarness
+=======
+  - Inventory # Corvax-Loadouts
+>>>>>>> r1remote/master
   - MusicianJumpsuit
   - CommonBackpack
   - MusicianOuterClothing
@@ -195,7 +248,11 @@
 - type: roleLoadout
   id: JobQuartermaster
   groups:
+<<<<<<< HEAD
   - GroupTankHarness
+=======
+  - Inventory # Corvax-Loadouts
+>>>>>>> r1remote/master
   - QuartermasterHead
   - QuartermasterNeck
   - QuartermasterJumpsuit
@@ -210,7 +267,11 @@
 - type: roleLoadout
   id: JobCargoTechnician
   groups:
+<<<<<<< HEAD
   - GroupTankHarness
+=======
+  - Inventory # Corvax-Loadouts
+>>>>>>> r1remote/master
   - CargoTechnicianHead
   - CargoTechnicianJumpsuit
   - CargoTechnicianBackpack
@@ -224,7 +285,11 @@
 - type: roleLoadout
   id: JobSalvageSpecialist
   groups:
+<<<<<<< HEAD
   - GroupTankHarness
+=======
+  - Inventory # Corvax-Loadouts
+>>>>>>> r1remote/master
   - SalvageSpecialistBackpack
   - SalvageSpecialistOuterClothing
   - SalvageSpecialistShoes
@@ -237,10 +302,14 @@
 - type: roleLoadout
   id: JobChiefEngineer
   groups:
+<<<<<<< HEAD
   - GroupTankHarness
+=======
+  - Inventory # Corvax-Loadouts
+>>>>>>> r1remote/master
   - ChiefEngineerHead
   - ChiefEngineerJumpsuit
-  - StationEngineerBackpack
+  - ChiefEngineerBackpack # Corvax-Loadouts
   - ChiefEngineerNeck
   - ChiefEngineerOuterClothing
   - ChiefEngineerShoes
@@ -251,7 +320,11 @@
 - type: roleLoadout
   id: JobTechnicalAssistant
   groups:
+<<<<<<< HEAD
   - GroupTankHarness
+=======
+  - Inventory # Corvax-Loadouts
+>>>>>>> r1remote/master
   - TechnicalAssistantJumpsuit
   - StationEngineerBackpack
   - SurvivalExtended
@@ -261,7 +334,11 @@
 - type: roleLoadout
   id: JobStationEngineer
   groups:
+<<<<<<< HEAD
   - GroupTankHarness
+=======
+  - Inventory # Corvax-Loadouts
+>>>>>>> r1remote/master
   - StationEngineerHead
   - StationEngineerJumpsuit
   - StationEngineerBackpack
@@ -275,7 +352,11 @@
 - type: roleLoadout
   id: JobAtmosphericTechnician
   groups:
+<<<<<<< HEAD
   - GroupTankHarness
+=======
+  - Inventory # Corvax-Loadouts
+>>>>>>> r1remote/master
   - AtmosphericTechnicianJumpsuit
   - AtmosphericTechnicianBackpack
   - AtmosphericTechnicianOuterClothing
@@ -288,7 +369,11 @@
 - type: roleLoadout
   id: JobResearchDirector
   groups:
+<<<<<<< HEAD
   - GroupTankHarness
+=======
+  - Inventory # Corvax-Loadouts
+>>>>>>> r1remote/master
   - ResearchDirectorHead
   - ResearchDirectorNeck
   - ResearchDirectorJumpsuit
@@ -304,7 +389,11 @@
 - type: roleLoadout
   id: JobScientist
   groups:
+<<<<<<< HEAD
   - GroupTankHarness
+=======
+  - Inventory # Corvax-Loadouts
+>>>>>>> r1remote/master
   - ScientistHead
   - ScientistNeck
   - ScientistJumpsuit
@@ -321,7 +410,11 @@
 - type: roleLoadout
   id: JobResearchAssistant
   groups:
+<<<<<<< HEAD
   - GroupTankHarness
+=======
+  - Inventory # Corvax-Loadouts
+>>>>>>> r1remote/master
   - ResearchAssistantJumpsuit
   - ScientistBackpack
   - Glasses
@@ -333,6 +426,7 @@
 - type: roleLoadout
   id: JobHeadOfSecurity
   groups:
+  - Inventory # Corvax-Loadouts
   - HeadofSecurityHead
   - HeadofSecurityNeck
   - HeadofSecurityJumpsuit
@@ -348,6 +442,7 @@
 - type: roleLoadout
   id: JobWarden
   groups:
+  - Inventory # Corvax-Loadouts
   - WardenHead
   - WardenJumpsuit
   - SecurityBackpack
@@ -362,6 +457,7 @@
 - type: roleLoadout
   id: JobSecurityOfficer
   groups:
+  - Inventory # Corvax-Loadouts
   - SecurityHead
   - SecurityJumpsuit
   - SecurityBackpack
@@ -377,7 +473,11 @@
 - type: roleLoadout
   id: JobDetective
   groups:
+<<<<<<< HEAD
   - GroupTankHarness
+=======
+  - Inventory # Corvax-Loadouts
+>>>>>>> r1remote/master
   - DetectiveHead
   - DetectiveNeck
   - DetectiveJumpsuit
@@ -392,6 +492,7 @@
 - type: roleLoadout
   id: JobSecurityCadet
   groups:
+  - Inventory # Corvax-Loadouts
   - SecurityCadetJumpsuit
   - SecurityBackpack
   - SurvivalSecurity
@@ -402,7 +503,11 @@
 - type: roleLoadout
   id: JobChiefMedicalOfficer
   groups:
+<<<<<<< HEAD
   - GroupTankHarness
+=======
+  - Inventory # Corvax-Loadouts
+>>>>>>> r1remote/master
   - ChiefMedicalOfficerHead
   - MedicalMask
   - ChiefMedicalOfficerJumpsuit
@@ -419,7 +524,11 @@
 - type: roleLoadout
   id: JobMedicalDoctor
   groups:
+<<<<<<< HEAD
   - GroupTankHarness
+=======
+  - Inventory # Corvax-Loadouts
+>>>>>>> r1remote/master
   - MedicalDoctorHead
   - MedicalMask
   - MedicalDoctorJumpsuit
@@ -436,7 +545,11 @@
 - type: roleLoadout
   id: JobMedicalIntern
   groups:
+<<<<<<< HEAD
   - GroupTankHarness
+=======
+  - Inventory # Corvax-Loadouts
+>>>>>>> r1remote/master
   - MedicalInternJumpsuit
   - MedicalBackpack
   - Glasses
@@ -447,7 +560,11 @@
 - type: roleLoadout
   id: JobChemist
   groups:
+<<<<<<< HEAD
   - GroupTankHarness
+=======
+  - Inventory # Corvax-Loadouts
+>>>>>>> r1remote/master
   - MedicalMask
   - ChemistJumpsuit
   - MedicalGloves
@@ -461,7 +578,11 @@
 - type: roleLoadout
   id: JobParamedic
   groups:
+<<<<<<< HEAD
   - GroupTankHarness
+=======
+  - Inventory # Corvax-Loadouts
+>>>>>>> r1remote/master
   - ParamedicHead
   - MedicalMask
   - ParamedicJumpsuit
@@ -478,7 +599,11 @@
 - type: roleLoadout
   id: JobZookeeper
   groups:
+<<<<<<< HEAD
   - GroupTankHarness
+=======
+  - Inventory # Corvax-Loadouts
+>>>>>>> r1remote/master
   - CommonBackpack
   - Glasses
   - Survival
@@ -488,7 +613,11 @@
 - type: roleLoadout
   id: JobReporter
   groups:
+<<<<<<< HEAD
   - GroupTankHarness
+=======
+  - Inventory # Corvax-Loadouts
+>>>>>>> r1remote/master
   - ReporterJumpsuit
   - CommonBackpack
   - Glasses
@@ -499,8 +628,12 @@
 - type: roleLoadout
   id: JobPsychologist
   groups:
+<<<<<<< HEAD
   - GroupTankHarness
   - PsychologistJumpsuit
+=======
+  - Inventory # Corvax-Loadouts
+>>>>>>> r1remote/master
   - MedicalBackpack
   - Glasses
   - Survival
@@ -510,7 +643,11 @@
 - type: roleLoadout
   id: JobBoxer
   groups:
+<<<<<<< HEAD
   - GroupTankHarness
+=======
+  - Inventory # Corvax-Loadouts
+>>>>>>> r1remote/master
   - BoxerJumpsuit
   - BoxerGloves
   - CommonBackpack

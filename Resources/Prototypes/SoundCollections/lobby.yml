@@ -14,5 +14,11 @@
     - /Audio/Lobby/pwmur.ogg
 #    - /Audio/Lobby/lasers_rip_apart_the_bulkhead.ogg
     - /Audio/Lobby/every_light_is_blinking_at_once.ogg
+<<<<<<< HEAD
     - /Audio/_NF/Lobby/victory.ogg # Frontier
     - /Audio/_NF/Lobby/shibamata.ogg # Frontier
+=======
+    - /Audio/Corvax/Lobby/title2.ogg # Corvax-LobbyMusic
+    - /Audio/Lobby/atomicamnesiammx.ogg
+    - /Audio/Corvax/Lobby/service.ogg # Corvax-LobbyMusic
+>>>>>>> r1remote/master

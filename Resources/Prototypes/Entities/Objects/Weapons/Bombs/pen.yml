@@ -21,8 +21,26 @@
   - type: DeviceLinkSink
     ports:
       - Trigger
+<<<<<<< HEAD
   - type: EmitSoundOnUse
     handle: false # don't want the sound to stop the explosion from triggering
+=======
+# Corvax-HiddenDesc-Start
+  - type: HiddenDescription
+    entries:
+    - label: corvax-hidden-desc-PenExploding-syndicate
+      whitelistMind:
+        components:
+          - TraitorRole
+          - NukeOperative
+    - label: corvax-hidden-desc-PenExploding-research
+      jobRequired:
+        - ResearchAssistant
+        - ResearchDirector
+        - Scientist
+        - Borg
+# Corvax-HiddenDesc-End
+>>>>>>> r1remote/master
 
 - type: entity
   parent: [BaseItem, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband

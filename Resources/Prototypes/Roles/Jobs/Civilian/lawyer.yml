@@ -8,6 +8,7 @@
     - !type:OverallPlaytimeRequirement
       time: 21600
   startingGear: LawyerGear
+  setPreference: false # Corvax-IAA
   icon: "JobIconLawyer"
   supervisors: job-supervisors-hire
   canBeAntag: false

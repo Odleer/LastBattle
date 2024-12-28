@@ -5,8 +5,13 @@
   playTimeTracker: JobMime
   setPreference: false # Frontier
   requirements:
+<<<<<<< HEAD
     - !type:OverallPlaytimeRequirement
       time: 10800
+=======
+  - !type:OverallPlaytimeRequirement
+      time: 90000 #25 hrs # Corvax-RoleTime
+>>>>>>> r1remote/master
   startingGear: MimeGear
   icon: "JobIconMime"
   supervisors: job-supervisors-hire # Frontier

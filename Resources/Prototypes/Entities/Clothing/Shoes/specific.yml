@@ -114,11 +114,17 @@
   - type: Clothing
     sprite: Clothing/Shoes/Specific/galoshes.rsi
   - type: NoSlip
+<<<<<<< HEAD
   - type: SlowedOverSlippery
     slowdownModifier: 0.7
   - type: SpeedModifierContactCapClothing
     maxContactSprintSlowdown: 0.7
     maxContactWalkSlowdown: 0.7
+=======
+  - type: ClothingSpeedModifier # Corvax-MRP
+    walkModifier: 0.9
+    sprintModifier: 0.9
+>>>>>>> r1remote/master
 
 - type: entity
   parent: [ClothingShoesBaseButcherable, BaseC3Contraband, ContrabandClothing ] # Frontier: BaseMajorContraband<BaseC3Contraband, added ContrabandClothing
@@ -136,6 +142,20 @@
     # ninja are masters of sneaking around relatively quickly, won't break cloak
     walkModifier: 1.1
     sprintModifier: 1.3
+# Corvax-HiddenDesc-Start
+  - type: HiddenDescription
+    entries:
+    - label: corvax-hidden-desc-NoSlip-ninja
+      whitelistMind:
+        components:
+          - NinjaRole
+    - label: corvax-hidden-desc-NoSlip-research
+      jobRequired:
+        - ResearchAssistant
+        - ResearchDirector
+        - Scientist
+        - Borg
+# Corvax-HiddenDesc-End
 
 - type: entity
   parent: [ClothingShoesBaseButcherable, BaseC2ContrabandUnredeemable] # Frontier: BaseMajorContraband<BaseC2ContrabandUnredeemable
@@ -198,6 +218,21 @@
       interfaces:
         enum.ChameleonUiKey.Key:
           type: ChameleonBoundUserInterface
+# Corvax-HiddenDesc-Start
+    - type: HiddenDescription
+      entries:
+      - label: corvax-hidden-desc-Chameleon-syndicate
+        whitelistMind:
+          components:
+            - TraitorRole
+            - NukeOperative
+      - label: corvax-hidden-desc-Chameleon-research
+        jobRequired:
+          - ResearchAssistant
+          - ResearchDirector
+          - Scientist
+          - Borg
+# Corvax-HiddenDesc-End
 
 - type: entity
   parent: [ClothingShoesChameleon, BaseC3SyndicateContraband] # Frontier: add BaseC3SyndicateContraband
@@ -207,9 +242,39 @@
   description: Stylish black shoes.
   components:
   - type: NoSlip
+<<<<<<< HEAD
   - type: Contraband # Frontier
     hideValues: true # Frontier
 
+=======
+# Corvax-HiddenDesc-Start
+  - type: HiddenDescription
+    entries:
+    - label: corvax-hidden-desc-Chameleon-syndicate
+      whitelistMind:
+        components:
+          - TraitorRole
+          - NukeOperative
+    - label: corvax-hidden-desc-NoSlip-syndicate
+      whitelistMind:
+        components:
+          - TraitorRole
+          - NukeOperative
+    - label: corvax-hidden-desc-Chameleon-research
+      jobRequired:
+        - ResearchAssistant
+        - ResearchDirector
+        - Scientist
+        - Borg
+    - label: corvax-hidden-desc-NoSlip-research
+      jobRequired:
+        - ResearchAssistant
+        - ResearchDirector
+        - Scientist
+        - Borg
+# Corvax-HiddenDesc-End
+          
+>>>>>>> r1remote/master
 - type: entity
   parent: ClothingShoesClown
   id: ClothingShoesJester

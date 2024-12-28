@@ -13,5 +13,10 @@
     ClothingUniformJumpsuitLibrarian: 3
     ClothingUniformJumpskirtLibrarian: 3
     ClothingShoesBootsLaceup: 2
+<<<<<<< HEAD
 #    ClothingHeadsetService: 2 # Frontier
 
+=======
+    ClothingHeadsetService: 2
+    PrinterDocFlatpack: 2 # Corvax-Printer
+>>>>>>> r1remote/master

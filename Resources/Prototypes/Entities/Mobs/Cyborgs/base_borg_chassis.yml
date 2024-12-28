@@ -233,6 +233,7 @@
   - type: Emoting
   - type: GuideHelp
     guides:
+<<<<<<< HEAD
     - Cyborgs
     - Robotics
   - type: ProtectedFromStepTriggers
@@ -241,6 +242,12 @@
       flatReductions:
         Heat: 10 # capable of touching light bulbs and stoves without feeling pain!
   - type: JetpackUser # DeltaV: Lets cyborgs fly in space
+=======
+      - Cyborgs
+  - type: StepTriggerImmune
+  - type: TTS # Corvax-TTS
+    voice: TrainingRobot
+>>>>>>> r1remote/master
 
 - type: entity
   abstract: true

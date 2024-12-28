@@ -5,8 +5,14 @@
   playTimeTracker: JobAtmosphericTechnician
   setPreference: false # Frontier
   requirements:
+<<<<<<< HEAD
     - !type:OverallPlaytimeRequirement
       time: 10800
+=======
+    - !type:DepartmentTimeRequirement
+      department: Engineering
+      time: 36000 #10 hrs # Corvax-RoleTime
+>>>>>>> r1remote/master
   startingGear: AtmosphericTechnicianGear
   icon: "JobIconAtmosphericTechnician"
   supervisors: job-supervisors-hire # Frontier

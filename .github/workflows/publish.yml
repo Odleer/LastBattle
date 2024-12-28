@@ -7,19 +7,20 @@ on:
   workflow_dispatch:
   # Frontier: re-enabled autopublish
   schedule:
-    - cron: '0 10 * * *'
+    - cron: '0 10 * * 5'
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Install dependencies
-      run: sudo apt-get install -y python3-paramiko python3-lxml
+#    - name: Install dependencies
+#      run: sudo apt-get install -y python3-paramiko python3-lxml
 
     - uses: actions/checkout@v3.6.0
       with:
         submodules: 'recursive'
+        
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v3.2.0
       with:
@@ -42,6 +43,7 @@ jobs:
     - name: Package client
       run: dotnet run --project Content.Packaging client --no-wipe-release
 
+<<<<<<< HEAD
     - name: Publish version
       run: Tools/publish_multi_request.py
       env:
@@ -53,8 +55,46 @@ jobs:
     # env:
     #    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     #    DISCORD_WEBHOOK_URL: ${{ secrets.CHANGELOG_DISCORD_WEBHOOK }}
-
-    - name: Publish changelog (RSS)
-      run: Tools/actions_changelog_rss.py
+=======
+    - name: Update Build Info
       env:
-        CHANGELOG_RSS_KEY: ${{ secrets.CHANGELOG_RSS_KEY }}
+        FORK_ID: ${{ vars.FORK_ID }}
+      run: Tools/gen_build_info.py
+
+    - name: Shuffle files around
+      run: |
+        mkdir "release/${{ github.sha }}"
+        cp release/*.zip "release/${{ github.sha }}"
+
+    - name: Upload files to centcomm
+      uses: burnett01/rsync-deployments@5.2
+      with:
+        switches: -avzr --ignore-existing
+        path: "release/${{ github.sha }}"
+        remote_path: ${{ secrets.BUILDS_FOLDER }}
+        remote_host: ${{ secrets.HOST }}
+        remote_user: ${{ secrets.USERNAME }}
+        remote_key: ${{ secrets.SSHKEY }}
+        remote_port: ${{ secrets.PORT }}
+
+    - name: Update manifest JSON
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.SSHKEY }}
+        port: ${{ secrets.PORT }}
+        script: node ~/ss14/manifest_generation/create-manifest.js -fork theta -id ${{ github.sha }}
+
+#    - name: Publish changelog (Discord)
+#      run: Tools/actions_changelogs_since_last_run.py
+#      env:
+#        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#        DISCORD_WEBHOOK_URL: ${{ secrets.CHANGELOG_DISCORD_WEBHOOK }}
+#        TRANSLATION_API_URL: ${{ secrets.CHANGELOG_TRANSLATION_API_URL }}
+>>>>>>> r1remote/master
+
+#    - name: Publish changelog (RSS)
+#      run: Tools/actions_changelog_rss.py
+#      env:
+#        CHANGELOG_RSS_KEY: ${{ secrets.CHANGELOG_RSS_KEY }}

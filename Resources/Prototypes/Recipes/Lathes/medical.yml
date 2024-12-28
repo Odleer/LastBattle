@@ -129,7 +129,10 @@
 - type: latheRecipe
   id: Medkit
   result: Medkit
+<<<<<<< HEAD
   name: lathe-recipe-Medkit-name
+=======
+>>>>>>> r1remote/master
   completetime: 2
   materials:
     Plastic: 300
@@ -138,43 +141,85 @@
   parent: Medkit
   id: MedkitBurn
   result: MedkitBurn
+<<<<<<< HEAD
   name: lathe-recipe-MedkitBurn-name
+=======
+  completetime: 2
+  materials:
+    Plastic: 300
+>>>>>>> r1remote/master
 
 - type: latheRecipe
   parent: Medkit
   id: MedkitToxin
   result: MedkitToxin
+<<<<<<< HEAD
   name: lathe-recipe-MedkitToxin-name
+=======
+  completetime: 2
+  materials:
+    Plastic: 300
+>>>>>>> r1remote/master
 
 - type: latheRecipe
   parent: Medkit
   id: MedkitO2
   result: MedkitO2
+<<<<<<< HEAD
   name: lathe-recipe-MedkitO2-name
+=======
+  completetime: 2
+  materials:
+    Plastic: 300
+>>>>>>> r1remote/master
 
 - type: latheRecipe
   parent: Medkit
   id: MedkitBrute
   result: MedkitBrute
+<<<<<<< HEAD
   name: lathe-recipe-MedkitBrute-name
+=======
+  completetime: 2
+  materials:
+    Plastic: 300
+>>>>>>> r1remote/master
 
 - type: latheRecipe
   parent: Medkit
   id: MedkitAdvanced
   result: MedkitAdvanced
+<<<<<<< HEAD
   name: lathe-recipe-MedkitAdvanced-name
+=======
+  completetime: 2
+  materials:
+    Plastic: 300
+>>>>>>> r1remote/master
 
 - type: latheRecipe
   parent: Medkit
   id: MedkitRadiation
   result: MedkitRadiation
+<<<<<<< HEAD
   name: lathe-recipe-MedkitRadiation-name
+=======
+  completetime: 2
+  materials:
+    Plastic: 300
+>>>>>>> r1remote/master
 
 - type: latheRecipe
   parent: Medkit
   id: MedkitCombat
   result: MedkitCombat
+<<<<<<< HEAD
   name: lathe-recipe-MedkitCombat-name
+=======
+  completetime: 2
+  materials:
+    Plastic: 300
+>>>>>>> r1remote/master
 
 - type: latheRecipe
   parent: BaseToolRecipe

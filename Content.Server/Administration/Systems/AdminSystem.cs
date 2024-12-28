@@ -11,6 +11,7 @@ using Content.Server.StationRecords.Systems;
 using Content.Shared.Administration;
 using Content.Shared.Administration.Events;
 using Content.Shared.CCVar;
+using Content.Shared.Corvax.CCCVars;
 using Content.Shared.GameTicking;
 using Content.Shared.Hands.Components;
 using Content.Shared.IdentityManagement;
@@ -114,7 +115,93 @@ public sealed class AdminSystem : EntitySystem
             if (!data.ActiveThisRound)
                 continue;
 
+<<<<<<< HEAD
             if (!_playerManager.TryGetPlayerData(id, out var playerData))
+=======
+            _playerManager.PlayerStatusChanged += OnPlayerStatusChanged;
+            _adminManager.OnPermsChanged += OnAdminPermsChanged;
+            _playTime.SessionPlayTimeUpdated += OnSessionPlayTimeUpdated;
+
+            // Panic Bunker Settings
+            Subs.CVar(_config, CCVars.PanicBunkerEnabled, OnPanicBunkerChanged, true);
+            Subs.CVar(_config, CCVars.PanicBunkerDisableWithAdmins, OnPanicBunkerDisableWithAdminsChanged, true);
+            Subs.CVar(_config, CCVars.PanicBunkerEnableWithoutAdmins, OnPanicBunkerEnableWithoutAdminsChanged, true);
+            Subs.CVar(_config, CCVars.PanicBunkerCountDeadminnedAdmins, OnPanicBunkerCountDeadminnedAdminsChanged, true);
+            Subs.CVar(_config, CCVars.PanicBunkerShowReason, OnPanicBunkerShowReasonChanged, true);
+            Subs.CVar(_config, CCVars.PanicBunkerMinAccountAge, OnPanicBunkerMinAccountAgeChanged, true);
+            Subs.CVar(_config, CCVars.PanicBunkerMinOverallMinutes, OnPanicBunkerMinOverallMinutesChanged, true);
+            Subs.CVar(_config, CCCVars.PanicBunkerDenyVPN, OnPanicBunkerDenyVpnChanged, true); // Corvax-VPNGuard
+
+            /*
+             * TODO: Remove baby jail code once a more mature gateway process is established. This code is only being issued as a stopgap to help with potential tiding in the immediate future.
+             */
+
+            // Baby Jail Settings
+            Subs.CVar(_config, CCVars.BabyJailEnabled, OnBabyJailChanged, true);
+            Subs.CVar(_config, CCVars.BabyJailShowReason, OnBabyJailShowReasonChanged, true);
+            Subs.CVar(_config, CCVars.BabyJailMaxAccountAge, OnBabyJailMaxAccountAgeChanged, true);
+            Subs.CVar(_config, CCVars.BabyJailMaxOverallMinutes, OnBabyJailMaxOverallMinutesChanged, true);
+
+            SubscribeLocalEvent<IdentityChangedEvent>(OnIdentityChanged);
+            SubscribeLocalEvent<PlayerAttachedEvent>(OnPlayerAttached);
+            SubscribeLocalEvent<PlayerDetachedEvent>(OnPlayerDetached);
+            SubscribeLocalEvent<RoleAddedEvent>(OnRoleEvent);
+            SubscribeLocalEvent<RoleRemovedEvent>(OnRoleEvent);
+            SubscribeLocalEvent<RoundRestartCleanupEvent>(OnRoundRestartCleanup);
+        }
+
+        private void OnRoundRestartCleanup(RoundRestartCleanupEvent ev)
+        {
+            _roundActivePlayers.Clear();
+
+            foreach (var (id, data) in _playerList)
+            {
+                if (!data.ActiveThisRound)
+                    continue;
+
+                if (!_playerManager.TryGetPlayerData(id, out var playerData))
+                    return;
+
+                _playerManager.TryGetSessionById(id, out var session);
+                _playerList[id] = GetPlayerInfo(playerData, session);
+            }
+
+            var updateEv = new FullPlayerListEvent() { PlayersInfo = _playerList.Values.ToList() };
+
+            foreach (var admin in _adminManager.ActiveAdmins)
+            {
+                RaiseNetworkEvent(updateEv, admin.Channel);
+            }
+        }
+
+        public void UpdatePlayerList(ICommonSession player)
+        {
+            _playerList[player.UserId] = GetPlayerInfo(player.Data, player);
+
+            var playerInfoChangedEvent = new PlayerInfoChangedEvent
+            {
+                PlayerInfo = _playerList[player.UserId]
+            };
+
+            foreach (var admin in _adminManager.ActiveAdmins)
+            {
+                RaiseNetworkEvent(playerInfoChangedEvent, admin.Channel);
+            }
+        }
+
+        public PlayerInfo? GetCachedPlayerInfo(NetUserId? netUserId)
+        {
+            if (netUserId == null)
+                return null;
+
+            _playerList.TryGetValue(netUserId.Value, out var value);
+            return value ?? null;
+        }
+
+        private void OnIdentityChanged(ref IdentityChangedEvent ev)
+        {
+            if (!TryComp<ActorComponent>(ev.CharacterEntity, out var actor))
+>>>>>>> r1remote/master
                 return;
 
             _playerManager.TryGetSessionById(id, out var session);
@@ -398,7 +485,118 @@ public sealed class AdminSystem : EntitySystem
         var ev = new BabyJailChangedEvent(BabyJail);
         foreach (var admin in _adminManager.AllAdmins)
         {
+<<<<<<< HEAD
             RaiseNetworkEvent(ev, admin);
+=======
+            PanicBunker.DisableWithAdmins = enabled;
+            UpdatePanicBunker();
+        }
+
+        private void OnPanicBunkerEnableWithoutAdminsChanged(bool enabled)
+        {
+            PanicBunker.EnableWithoutAdmins = enabled;
+            UpdatePanicBunker();
+        }
+
+        private void OnPanicBunkerCountDeadminnedAdminsChanged(bool enabled)
+        {
+            PanicBunker.CountDeadminnedAdmins = enabled;
+            UpdatePanicBunker();
+        }
+
+        private void OnPanicBunkerShowReasonChanged(bool enabled)
+        {
+            PanicBunker.ShowReason = enabled;
+            SendPanicBunkerStatusAll();
+        }
+
+        private void OnBabyJailShowReasonChanged(bool enabled)
+        {
+            BabyJail.ShowReason = enabled;
+            SendBabyJailStatusAll();
+        }
+
+        private void OnPanicBunkerMinAccountAgeChanged(int minutes)
+        {
+            PanicBunker.MinAccountAgeMinutes = minutes;
+            SendPanicBunkerStatusAll();
+        }
+
+        private void OnBabyJailMaxAccountAgeChanged(int minutes)
+        {
+            BabyJail.MaxAccountAgeMinutes = minutes;
+            SendBabyJailStatusAll();
+        }
+
+        private void OnPanicBunkerMinOverallMinutesChanged(int minutes)
+        {
+            PanicBunker.MinOverallMinutes = minutes;
+            SendPanicBunkerStatusAll();
+        }
+
+        private void OnBabyJailMaxOverallMinutesChanged(int minutes)
+        {
+            BabyJail.MaxOverallMinutes = minutes;
+            SendBabyJailStatusAll();
+        }
+
+        // Corvax-VPNGuard-Start
+        private void OnPanicBunkerDenyVpnChanged(bool deny)
+        {
+            PanicBunker.DenyVpn = deny;
+            SendPanicBunkerStatusAll();
+        }
+        // Corvax-VPNGuard-End
+
+        private void UpdatePanicBunker()
+        {
+            var admins = PanicBunker.CountDeadminnedAdmins
+                ? _adminManager.AllAdmins
+                : _adminManager.ActiveAdmins;
+            var hasAdmins = admins.Any();
+
+            // TODO Fix order dependent Cvars
+            // Please for the sake of my sanity don't make cvars & order dependent.
+            // Just make a bool field on the system instead of having some cvars automatically modify other cvars.
+            //
+            // I.e., this:
+            //   /sudo cvar game.panic_bunker.enabled true
+            //   /sudo cvar game.panic_bunker.disable_with_admins true
+            // and this:
+            //   /sudo cvar game.panic_bunker.disable_with_admins true
+            //   /sudo cvar game.panic_bunker.enabled true
+            //
+            // should have the same effect, but currently setting the disable_with_admins can modify enabled.
+
+            if (hasAdmins && PanicBunker.DisableWithAdmins)
+            {
+                _config.SetCVar(CCVars.PanicBunkerEnabled, false);
+            }
+            else if (!hasAdmins && PanicBunker.EnableWithoutAdmins)
+            {
+                _config.SetCVar(CCVars.PanicBunkerEnabled, true);
+            }
+
+            SendPanicBunkerStatusAll();
+        }
+
+        private void SendPanicBunkerStatusAll()
+        {
+            var ev = new PanicBunkerChangedEvent(PanicBunker);
+            foreach (var admin in _adminManager.AllAdmins)
+            {
+                RaiseNetworkEvent(ev, admin);
+            }
+        }
+
+        private void SendBabyJailStatusAll()
+        {
+            var ev = new BabyJailChangedEvent(BabyJail);
+            foreach (var admin in _adminManager.AllAdmins)
+            {
+                RaiseNetworkEvent(ev, admin);
+            }
+>>>>>>> r1remote/master
         }
     }
 

@@ -39,8 +39,12 @@ public sealed class ApcSystem : EntitySystem
         SubscribeLocalEvent<ApcComponent, GotEmaggedEvent>(OnEmagged);
 
         SubscribeLocalEvent<ApcComponent, EmpPulseEvent>(OnEmpPulse);
+<<<<<<< HEAD
         SubscribeLocalEvent<ApcComponent, EmpDisabledRemoved>(OnEmpDisabledRemoved); // Frontier: Upstream - #28984
         SubscribeLocalEvent<ApcComponent, ToolUseAttemptEvent>(OnToolUseAttempt); // Frontier
+=======
+        SubscribeLocalEvent<ApcComponent, EmpDisabledRemoved>(OnEmpDisabled);
+>>>>>>> r1remote/master
     }
 
     public override void Update(float deltaTime)
@@ -182,8 +186,12 @@ public sealed class ApcSystem : EntitySystem
             return ApcChargeState.Full;
         }
 
+        bool rechargeable = true;
+        if (TryComp(uid, out BatteryComponent? bat))
+            rechargeable = bat.IsRechargeable;
+
         var delta = battery.CurrentSupply - battery.CurrentReceiving;
-        return delta < 0 ? ApcChargeState.Charging : ApcChargeState.Lack;
+        return delta < 0 && rechargeable ? ApcChargeState.Charging : ApcChargeState.Lack;
     }
 
     private ApcExternalPowerState CalcExtPowerState(EntityUid uid, PowerState.Battery battery)
@@ -232,6 +240,12 @@ public sealed class ApcSystem : EntitySystem
                 return;
             }
         }
+    }
+
+    private void OnEmpDisabled(EntityUid uid, ApcComponent component, EmpDisabledRemoved args)
+    {
+        if (component.EnableAfterEmp && !component.MainBreakerEnabled)
+            ApcToggleBreaker(uid, component);
     }
 }
 

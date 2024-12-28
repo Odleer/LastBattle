@@ -10,6 +10,7 @@
   startingGear: ServiceWorkerGear
   icon: "JobIconServiceWorker"
   supervisors: job-supervisors-service
+<<<<<<< HEAD
   accessGroups: # Frontier
   - GeneralAccess # Frontier
   # access: # Frontier
@@ -19,6 +20,16 @@
   # - Kitchen # Frontier
   # extendedAccess: # Frontier
   # - Hydroponics # Frontier
+=======
+  canBeAntag: true # Corvax-MRP: Available not only for newbies
+  access:
+  - Service
+  - Maintenance
+  - Bar
+  - Kitchen
+  extendedAccess:
+  - Hydroponics
+>>>>>>> r1remote/master
 
 - type: startingGear
   id: ServiceWorkerGear

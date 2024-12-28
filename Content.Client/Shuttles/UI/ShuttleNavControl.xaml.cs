@@ -200,6 +200,12 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
 
         handle.DrawPrimitives(DrawPrimitiveTopology.TriangleFan, radarPosVerts, Color.Lime);
 
+<<<<<<< HEAD
+=======
+
+
+        var rot = ourEntRot + _rotation.Value;
+>>>>>>> r1remote/master
         var viewBounds = new Box2Rotated(new Box2(-WorldRange, -WorldRange, WorldRange, WorldRange).Translated(mapPos.Position), rot, mapPos.Position);
         var viewAABB = viewBounds.CalcBoundingBox();
 

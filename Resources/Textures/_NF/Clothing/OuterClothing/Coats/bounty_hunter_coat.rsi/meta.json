@@ -1,7 +1,11 @@
 {
   "version": 1,
   "license": "CC-BY-SA-3.0",
+<<<<<<< HEAD:Resources/Textures/_NF/Clothing/OuterClothing/Coats/bounty_hunter_coat.rsi/meta.json
   "copyright": "Taken from tgstation at commit https://github.com/tgstation/tgstation/commit/4f6190e2895e09116663ef282d3ce1d8b35c032e , edited by Alekshhh. Vox state made by Flareguy for SS14, recolored for mercenary by erhardsteinhauer (github/discord)",
+=======
+  "copyright": "Taken from tgstation at commit https://github.com/tgstation/tgstation/commit/46a92082e4dd599e233ebf280050fb5be0107da9. equipped-OUTERCLOTHING-vox state taken from /vg/station at commit https://github.com/vgstation-coders/vgstation13/commit/31d6576ba8102135d058ef49c3cb6ecbe8db8a79",
+>>>>>>> r1remote/master:Resources/Textures/Clothing/OuterClothing/WinterCoats/coatatmos.rsi/meta.json
   "size": {
     "x": 32,
     "y": 32

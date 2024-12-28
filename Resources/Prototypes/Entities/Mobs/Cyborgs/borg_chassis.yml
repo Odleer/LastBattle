@@ -268,12 +268,17 @@
   - type: FootstepModifier
     footstepSoundCollection:
       collection: FootstepHoverBorg
+<<<<<<< HEAD
   - type: SolutionScanner
   - type: InteractionPopup
     interactSuccessString: petting-success-medical-cyborg
     interactFailureString: petting-failure-medical-cyborg
     interactSuccessSound:
       path: /Audio/Ambience/Objects/periodic_beep.ogg
+=======
+  - type: TTS # Corvax-TTS
+    voice: TrainingRobot
+>>>>>>> r1remote/master
 
 - type: entity
   id: BorgChassisService

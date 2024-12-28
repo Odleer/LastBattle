@@ -247,8 +247,12 @@
   - type: Stamp
     stampedName: stamp-component-stamped-name-approved
     stampedColor: "#00be00"
+<<<<<<< HEAD
     stampState: "paper_stamp-ok"
     reapply: true # Frontier
+=======
+    stampState: "paper_stamp-approve" # Corvax-IAA: paper_stamp-ok state is IAA!
+>>>>>>> r1remote/master
   - type: Sprite
     state: stamp-ok
 

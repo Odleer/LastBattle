@@ -5,8 +5,14 @@
   playTimeTracker: JobMedicalDoctor
   setPreference: false # Frontier
   requirements:
+<<<<<<< HEAD
     - !type:OverallPlaytimeRequirement
       time: 10800
+=======
+    - !type:DepartmentTimeRequirement
+      department: Medical
+      time: 7200 #2 hrs # Corvax-RoleTime
+>>>>>>> r1remote/master
   startingGear: DoctorGear
   icon: "JobIconMedicalDoctor"
   supervisors: job-supervisors-hire # Frontier

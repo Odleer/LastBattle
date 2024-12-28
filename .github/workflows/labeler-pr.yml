@@ -5,10 +5,14 @@ on:
 
 jobs:
   labeler:
+<<<<<<< HEAD
     if: github.actor != 'PJBot' && github.actor != 'FrontierATC' # Frontier
+=======
+    if: github.actor != 'IanComradeBot'
+    runs-on: [self-hosted, linux, x64]
+>>>>>>> r1remote/master
     permissions:
       contents: read
       pull-requests: write
-    runs-on: ubuntu-latest
     steps:
     - uses: actions/labeler@v5

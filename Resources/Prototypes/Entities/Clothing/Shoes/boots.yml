@@ -20,8 +20,14 @@
     sprite: Clothing/Shoes/Boots/jackboots.rsi
   - type: Clothing
     sprite: Clothing/Shoes/Boots/jackboots.rsi
+<<<<<<< HEAD
   - type: ClothingSlowOnDamageModifier
     modifier: 0.5
+=======
+  - type: FootstepModifier # Corvax-Sounds
+    footstepSoundCollection:
+      collection: FootstepBoots
+>>>>>>> r1remote/master
 
 - type: entity
   parent: ClothingShoesBaseButcherable

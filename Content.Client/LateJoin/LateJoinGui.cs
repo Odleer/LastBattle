@@ -1,5 +1,6 @@
 using System.Linq;
 using System.Numerics;
+using System.Linq;
 using Content.Client.CrewManifest;
 using Content.Client.GameTicking.Managers;
 using Content.Client.Lobby;
@@ -45,7 +46,7 @@ namespace Content.Client.LateJoin
 
         public LateJoinGui()
         {
-            MinSize = SetSize = new Vector2(360, 560);
+            MinSize = SetSize = new Vector2(450, 560);
             IoCManager.InjectDependencies(this);
             _sprites = _entitySystem.GetEntitySystem<SpriteSystem>();
             _crewManifest = _entitySystem.GetEntitySystem<CrewManifestSystem>();

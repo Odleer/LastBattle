@@ -3,7 +3,11 @@ using Content.Server._NF.M_Emp;
 using Content.Server.Shuttles.Systems;
 using Content.Shared.Construction.Prototypes;
 using Content.Shared.Damage;
+<<<<<<< HEAD
 using Content.Shared.DeviceLinking; // Frontier
+=======
+using Robust.Shared.Audio;
+>>>>>>> r1remote/master
 using Robust.Shared.GameStates;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
@@ -55,7 +59,12 @@ namespace Content.Server.Shuttles.Components
 
         public List<EntityUid> Colliding = new();
 
+        /// <summary>
+        /// Use SetThrusterFiring instead of setting this manually
+        /// </summary>
         public bool Firing = false;
+
+        public TimeSpan LastFire;
 
         /// <summary>
         /// Next time we tick damage for anyone colliding.
@@ -63,6 +72,7 @@ namespace Content.Server.Shuttles.Components
         [ViewVariables(VVAccess.ReadWrite), DataField("nextFire", customTypeSerializer:typeof(TimeOffsetSerializer))]
         public TimeSpan NextFire;
 
+<<<<<<< HEAD
         [DataField("machinePartThrust", customTypeSerializer: typeof(PrototypeIdSerializer<MachinePartPrototype>))]
         public string MachinePartThrust = "Capacitor";
 
@@ -86,6 +96,21 @@ namespace Content.Server.Shuttles.Components
         [DataField("togglePort", customTypeSerializer: typeof(PrototypeIdSerializer<SinkPortPrototype>))] // Frontier
         public string TogglePort = "Toggle"; // Frontier
 
+=======
+        [DataField("partRatingThrustMultiplier")]
+        public float PartRatingThrustMultiplier = 1.5f;
+
+        [DataField("soundSpinup")]
+        public SoundSpecifier? SoundSpinup;
+
+        [DataField("soundCycle")]
+        public SoundSpecifier? SoundCycle;
+
+        [DataField("soundShutdown")]
+        public SoundSpecifier? SoundShutdown;
+
+        public EntityUid? AudioUid;
+>>>>>>> r1remote/master
     }
 
     public enum ThrusterType

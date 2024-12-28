@@ -4,12 +4,21 @@
   description: job-description-technical-assistant
   playTimeTracker: JobTechnicalAssistant
   requirements:
+<<<<<<< HEAD
 #    - !type:DepartmentTimeRequirement
 #      department: Engineering
 #      time: 54000 #15 hrs
 #      inverted: true # stop playing intern if you're good at engineering!
     - !type:OverallPlaytimeRequirement # Frontier
       time: 10800 # Frontier
+=======
+    - !type:OverallPlaytimeRequirement
+      time: 3600 #1 hr
+    - !type:DepartmentTimeRequirement
+      department: Engineering
+      time: 36000 #10 hrs # Corvax-RoleTime
+      inverted: true # stop playing intern if you're good at engineering!
+>>>>>>> r1remote/master
   startingGear: TechnicalAssistantGear
   icon: "JobIconTechnicalAssistant"
   supervisors: job-supervisors-hire # Frontier

@@ -32,6 +32,7 @@ using Robust.Shared.Physics.Systems;
 using Content.Server.Station.Systems;
 using Content.Shared.Humanoid;
 using Robust.Shared.Prototypes;
+using Robust.Shared.Map;
 using Robust.Shared.Random;
 using Content.Shared.Body.Components; // Frontier: Gib organs
 using Content.Shared.Projectiles; // Frontier: embed triggers
@@ -99,6 +100,7 @@ namespace Content.Server.Explosion.EntitySystems
             SubscribeLocalEvent<TriggerOnStepTriggerComponent, StepTriggeredOffEvent>(OnStepTriggered);
             SubscribeLocalEvent<TriggerOnSlipComponent, SlipEvent>(OnSlipTriggered);
             SubscribeLocalEvent<TriggerWhenEmptyComponent, OnEmptyGunShotEvent>(OnEmptyTriggered);
+            SubscribeLocalEvent<TriggerOnParentChangeComponent, EntParentChangedMessage>(OnParentChange);
             SubscribeLocalEvent<RepeatingTriggerComponent, MapInitEvent>(OnRepeatInit);
             SubscribeLocalEvent<TriggerOnProjectileHitComponent, ProjectileHitEvent>(OnProjectileHitEvent); // Frontier: trigger on embed
 
@@ -185,7 +187,7 @@ namespace Content.Server.Explosion.EntitySystems
 
         private void HandleDeleteTrigger(EntityUid uid, DeleteOnTriggerComponent component, TriggerEvent args)
         {
-            EntityManager.QueueDeleteEntity(uid);
+            QueueDel(uid);
             args.Handled = true;
         }
 
@@ -280,8 +282,36 @@ namespace Content.Server.Explosion.EntitySystems
 
         private void OnTriggerCollide(EntityUid uid, TriggerOnCollideComponent component, ref StartCollideEvent args)
         {
+<<<<<<< HEAD
             if (args.OurFixtureId == component.FixtureID && (!component.IgnoreOtherNonHard || args.OtherFixture.Hard))
                 Trigger(uid, args.OtherEntity);
+=======
+            bool colliding = args.OurFixtureId == component.FixtureID && (!component.IgnoreOtherNonHard || args.OtherFixture.Hard);
+
+            bool compFilter = true;
+            if (component.RequiredComponents.Count > 0)
+            {
+                foreach (var entry in component.RequiredComponents.Values)
+                {
+                    if (!HasComp(args.OtherEntity, entry.Component.GetType()))
+                    {
+                        compFilter = false;
+                        break;
+                    }
+                }
+            }
+
+            if (colliding && compFilter)
+                Trigger(uid);
+>>>>>>> r1remote/master
+        }
+
+        private void OnParentChange(EntityUid uid, TriggerOnParentChangeComponent component,
+            ref EntParentChangedMessage args)
+        {
+            if (args.OldMapId is not { Valid: true })
+                return;
+            Trigger(uid, args.Transform.GridUid);
         }
 
         private void OnSpawnTriggered(EntityUid uid, TriggerOnSpawnComponent component, MapInitEvent args)
@@ -395,7 +425,6 @@ namespace Content.Server.Explosion.EntitySystems
                     _adminLogger.Add(LogType.Trigger,
                         $"{ToPrettyString(user.Value):user} started a {delay} second timer trigger on entity {ToPrettyString(uid):timer}");
                 }
-
             }
             else
             {

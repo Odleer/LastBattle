@@ -14,6 +14,7 @@
   color: "#9FED58"
   weight: 0 # Frontier: -10<0 accounted for in jobs
   roles:
+<<<<<<< HEAD
   # - Bartender # Frontier
   # - Botanist # Frontier
   # - Boxer # Frontier
@@ -52,6 +53,27 @@
   - ERTMailCarrier # Frontier
   editorHidden: true
   weight: 120
+=======
+  - Bartender
+  - Borg
+  - Botanist
+  - Boxer
+  - Chaplain
+  - Chef
+  - Clown
+  - HeadOfPersonnel
+  - Janitor
+  - Lawyer
+  - Librarian
+  - Mime
+  - Musician
+  - Passenger
+  - PassengerGodmode
+  - Reporter
+  - Visitor
+  - Zookeeper
+  - ServiceWorker
+>>>>>>> r1remote/master
 
 - type: department
   id: Command
@@ -59,6 +81,7 @@
   description: department-NFCommand-description # Frontier
   color: "#334E6D"
   roles:
+<<<<<<< HEAD
   # - Captain # Frontier
   # - ChiefEngineer # Frontier
   # - ChiefMedicalOfficer # Frontier
@@ -78,6 +101,17 @@
   - StationRepresentative # Frontier
   - Sheriff  # Frontier
   - StationTrafficController # Frontier
+=======
+  - Captain
+  - IAA # Corvax-IAA
+  - CentralCommandOfficial
+  - ChiefEngineer
+  - ChiefMedicalOfficer
+  - HeadOfPersonnel
+  - HeadOfSecurity
+  - ResearchDirector
+  - Quartermaster
+>>>>>>> r1remote/master
   primary: false
   weight: 2 # Frontier: 100<2 - accounted for in jobs
 
@@ -106,6 +140,7 @@
   color: "#5C7D4D" # Frontier: DE3A3A<5C7D4D
   weight: 1 # Frontier: 20<1 - accounted for in jobs
   roles:
+<<<<<<< HEAD
 #  - Detective # Frontier
 #  - HeadOfSecurity # Frontier
 #  - SecurityCadet # Frontier
@@ -121,6 +156,14 @@
   - Sheriff # Frontier
   - SeniorOfficer # Frontier
   - PublicAffairsLiaison # Frontier
+=======
+  - HeadOfSecurity
+  - SecurityCadet
+  - SecurityOfficer
+  - Pilot # Corvax-Pilot
+  - Detective
+  - Warden
+>>>>>>> r1remote/master
 
 - type: department
   id: Science
@@ -146,6 +189,16 @@
   name: department-Specific
   description: department-Specific-description
   color: "#9FED58"
+<<<<<<< HEAD
   weight: -91
+=======
+  weight: 10
+  roles:
+  - Boxer
+  - Reporter
+  - Zookeeper
+  - Psychologist
+  - Pilot # Corvax-Pilot
+>>>>>>> r1remote/master
   primary: false
   editorHidden: true # Frontier

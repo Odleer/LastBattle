@@ -498,6 +498,7 @@
     - CentrifugeMachineCircuitboard
     - CondenserMachineCircuitBoard
     - HotplateMachineCircuitboard
+    - PrinterDocMachineCircuitboard # Corvax-Printer
     - UniformPrinterMachineCircuitboard
     - FloorGreenCircuit
     - FloorBlueCircuit
@@ -1184,6 +1185,17 @@
 #      - ClothingOuterWinterWardenUnarmored # Frontier
       - ClothingOuterWinterQM
       - ClothingOuterWinterRD
+<<<<<<< HEAD
+=======
+      - ClothingNeckMantleCap
+      - ClothingNeckMantleCE
+      - ClothingNeckMantleCMO
+      - ClothingNeckMantleHOP
+      - ClothingNeckMantleHOS
+      - ClothingNeckMantleHOSShoulder # Corvax-Resprite: Old mantle
+      - ClothingNeckMantleRD
+      - ClothingNeckMantleQM
+>>>>>>> r1remote/master
       - ClothingOuterWinterMusician
       - ClothingOuterWinterClown
       - ClothingOuterWinterMime
@@ -1229,12 +1241,28 @@
       - FloorCarpetItemSkyBlue # Frontier
       - CarpetCyan
       - CarpetWhite
+<<<<<<< HEAD
       - FloorTileItemCarpetClown # Frontier
       - FloorTileItemCarpetOffice # Frontier
       - FloorTileItemEighties # Frontier
       - FloorTileItemArcadeBlue # Frontier
       - FloorTileItemArcadeBlue2 # Frontier
       - FloorTileItemArcadeRed # Frontier
+=======
+      # Corvax-Clothing-Start
+      - ClothingHeadHatCapHoS
+      - ClothingHeadHatBeretSecurityMedic
+      - ClothingHeadHatCapWardenAlt
+      - ClothingUniformJumpsuitCapTurtleneck
+      - ClothingUniformJumpskirtCapTurtleneck
+      - ClothingUniformJumpsuitHoSBlack
+      - ClothingUniformJumpskirtHoSBlack
+      - ClothingUniformJumpsuitHoPTurtleneck
+      - ClothingUniformJumpskirtHoPTurtleneck
+      - ClothingUniformJumpsuitRDClassical
+      - ClothingUniformJumpskirtRDClassical
+      # Corvax-Clothing-End
+>>>>>>> r1remote/master
   - type: EmagLatheRecipes
     emagStaticRecipes:
 #      - ClothingHeadHatCentcomcap # Frontier

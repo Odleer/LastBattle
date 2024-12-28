@@ -843,8 +843,11 @@
     damageModifierSet: StructuralMetallic
   - type: Physics
     bodyType: Static
+<<<<<<< HEAD
 #  - type: Reflect # Frontier
 #    reflectProb: 1 # Frontier
+=======
+>>>>>>> r1remote/master
   - type: Pullable
   - type: Airtight
     noAirWhenFullyAirBlocked: false
@@ -952,12 +955,17 @@
           3: { state: shuttle_construct-3, visible: true}
           4: { state: shuttle_construct-4, visible: true}
           5: { state: shuttle_construct-5, visible: true}
+<<<<<<< HEAD
   - type: RCDDeconstructable #Frontier
     cost: 6 #Frontier
     delay: 8 #Frontier
     fx: EffectRCDDeconstruct8 #Frontier
 #  - type: Reflect # Frontier
 #    reflectProb: 1 # Frontier
+=======
+  #- type: Reflect
+  #  reflectProb: 1
+>>>>>>> r1remote/master
 
 - type: entity
   parent: BaseWall
@@ -1001,8 +1009,13 @@
   - type: IconSmooth
     key: walls
     base: state
+<<<<<<< HEAD
 #  - type: Reflect # Frontier
 #    reflectProb: 1 # Frontier
+=======
+  #- type: Reflect
+  #  reflectProb: 1
+>>>>>>> r1remote/master
 
 - type: entity
   parent: BaseWall

@@ -10,10 +10,14 @@ on:
 
 jobs:
   build:
+<<<<<<< HEAD
     if: github.actor != 'PJBot' && github.event.pull_request.draft == false && github.actor != 'FrontierATC' # Frontier
+=======
+    if: github.actor != 'IanComradeBot' && github.event.pull_request.draft == false
+>>>>>>> r1remote/master
     strategy:
       matrix:
-        os: [ubuntu-latest]
+        os: [self-hosted, linux, x64]
 
     runs-on: ${{ matrix.os }}
 
@@ -33,10 +37,10 @@ jobs:
         cd RobustToolbox/
         git submodule update --init --recursive
 
-    - name: Setup .NET Core
-      uses: actions/setup-dotnet@v3.2.0
-      with:
-        dotnet-version: 8.0.x
+    #- name: Setup .NET Core
+    #  uses: actions/setup-dotnet@v3.2.0
+    #  with:
+    #    dotnet-version: 8.0.x
 
     - name: Install dependencies
       run: dotnet restore

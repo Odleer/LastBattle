@@ -26,8 +26,17 @@ public sealed partial class VoiceMaskSystem : EntitySystem
         SubscribeLocalEvent<VoiceMaskComponent, InventoryRelayedEvent<TransformSpeakerNameEvent>>(OnTransformSpeakerName);
         SubscribeLocalEvent<VoiceMaskComponent, VoiceMaskChangeNameMessage>(OnChangeName);
         SubscribeLocalEvent<VoiceMaskComponent, VoiceMaskChangeVerbMessage>(OnChangeVerb);
+<<<<<<< HEAD
         SubscribeLocalEvent<VoiceMaskComponent, ClothingGotEquippedEvent>(OnEquip);
         SubscribeLocalEvent<VoiceMaskSetNameEvent>(OpenUI);
+=======
+        SubscribeLocalEvent<VoiceMaskComponent, WearerMaskToggledEvent>(OnMaskToggled);
+        SubscribeLocalEvent<VoiceMaskerComponent, ClothingGotEquippedEvent>(OnEquip);
+        SubscribeLocalEvent<VoiceMaskerComponent, ClothingGotUnequippedEvent>(OnUnequip);
+        SubscribeLocalEvent<VoiceMaskSetNameEvent>(OnSetName);
+        // SubscribeLocalEvent<VoiceMaskerComponent, GetVerbsEvent<AlternativeVerb>>(GetVerbs);
+        InitializeTTS(); // Corvax-TTS
+>>>>>>> r1remote/master
     }
 
     private void OnTransformSpeakerName(Entity<VoiceMaskComponent> entity, ref InventoryRelayedEvent<TransformSpeakerNameEvent> args)
@@ -89,8 +98,18 @@ public sealed partial class VoiceMaskSystem : EntitySystem
 
     private void UpdateUI(Entity<VoiceMaskComponent> entity)
     {
+<<<<<<< HEAD
         if (_uiSystem.HasUi(entity, VoiceMaskUIKey.Key))
             _uiSystem.SetUiState(entity.Owner, VoiceMaskUIKey.Key, new VoiceMaskBuiState(GetCurrentVoiceName(entity), entity.Comp.VoiceMaskSpeechVerb));
+=======
+        if (!Resolve(owner, ref component))
+        {
+            return;
+        }
+
+        if (_uiSystem.HasUi(owner, VoiceMaskUIKey.Key))
+            _uiSystem.SetUiState(owner, VoiceMaskUIKey.Key, new VoiceMaskBuiState(component.VoiceName, component.VoiceId, component.SpeechVerb));
+>>>>>>> r1remote/master
     }
     #endregion
 

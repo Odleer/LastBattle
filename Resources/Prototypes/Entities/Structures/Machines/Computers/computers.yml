@@ -87,10 +87,15 @@
     key: enum.ShuttleConsoleUiKey.Key
   - type: UserInterface
     interfaces:
+<<<<<<< HEAD
         enum.ShuttleConsoleUiKey.Key:
           type: ShuttleConsoleBoundUserInterface
         enum.WiresUiKey.Key:
           type: WiresBoundUserInterface
+=======
+      enum.ShuttleConsoleUiKey.Key:
+        type: ModularRadarShuttleConsoleBoundUserInterface
+>>>>>>> r1remote/master
   - type: RadarConsole
   - type: WorldLoader
     radius: 256

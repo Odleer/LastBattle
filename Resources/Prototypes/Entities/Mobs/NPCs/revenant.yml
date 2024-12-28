@@ -23,6 +23,12 @@
   - type: Damageable
     damageContainer: Biological
   - type: NoSlip
+<<<<<<< HEAD
+=======
+  - type: Actions
+  - type: TTS # Corvax-TTS
+    voice: Kelthuzad
+>>>>>>> r1remote/master
   - type: Eye
     drawFov: false
     visMask:
@@ -69,9 +75,9 @@
     - StolenEssence
   - type: RandomMetadata
     nameSegments:
-    - The
+#    - The
     - RevenantType
-    - of
+#    - of
     - RevenantAdjective
     - RevenantTheme
   - type: Speech

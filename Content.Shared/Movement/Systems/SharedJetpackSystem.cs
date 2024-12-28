@@ -1,10 +1,12 @@
 using Content.Shared.Actions;
 using Content.Shared._EE.CCVar; // EE
 using Content.Shared.Gravity;
+using Content.Shared.Hands;
 using Content.Shared.Interaction.Events;
 using Content.Shared.Movement.Components;
 using Content.Shared.Movement.Events;
 using Content.Shared.Popups;
+using Content.Shared.Theta.RadarHUD;
 using Robust.Shared.Configuration; // EE
 using Robust.Shared.Containers;
 using Robust.Shared.Physics.Components;
@@ -126,7 +128,6 @@ public abstract class SharedJetpackSystem : EntitySystem
         if (TryComp(uid, out TransformComponent? xform) && !CanEnableOnGrid(xform.GridUid))
         {
             _popup.PopupClient(Loc.GetString("jetpack-no-station"), uid, args.Performer);
-
             return;
         }
 

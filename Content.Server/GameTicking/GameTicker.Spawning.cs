@@ -245,6 +245,7 @@ namespace Content.Server.GameTicking
 
             if (lateJoin && !silent)
             {
+<<<<<<< HEAD
                 if (jobPrototype.JoinNotifyCrew)
                 {
                     _chatSystem.DispatchStationAnnouncement(station,
@@ -266,6 +267,15 @@ namespace Content.Server.GameTicking
                         Loc.GetString("latejoin-arrival-sender"),
                         playDefaultSound: false);
                 }
+=======
+                _chatSystem.DispatchStationAnnouncement(station,
+                    Loc.GetString("latejoin-arrival-announcement",
+                        ("character", MetaData(mob).EntityName),
+                        ("gender", character.Gender), // Corvax-LastnameGender
+                        ("job", CultureInfo.CurrentCulture.TextInfo.ToTitleCase(jobName))),
+                    Loc.GetString("latejoin-arrival-sender"),
+                    playDefaultSound: false);
+>>>>>>> r1remote/master
             }
 
             // who tf is perma oWo
@@ -378,7 +388,7 @@ namespace Content.Server.GameTicking
                 _roles.MindAddRole(mind.Value, "MindRoleObserver");
             }
 
-            var ghost = _ghost.SpawnGhost(mind.Value);
+            var ghost = _ghost.SpawnGhost(mind.Value, player.AttachedEntity);
             _adminLogger.Add(LogType.LateJoin,
                 LogImpact.Low,
                 $"{player.Name} late joined the round as an Observer with {ToPrettyString(ghost):entity}.");

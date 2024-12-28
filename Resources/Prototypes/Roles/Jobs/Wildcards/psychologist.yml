@@ -21,4 +21,9 @@
     ears: ClothingHeadsetMedical
   storage:
     back:
+<<<<<<< HEAD
     - RubberStampPsychologist
+=======
+#    - BoxSurvivalMedical
+    - RubberStampPsychologist # Corvax-MRP
+>>>>>>> r1remote/master

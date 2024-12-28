@@ -26,7 +26,7 @@ public sealed class CargoTest
         new("FunCrateGambling")
     ];
 
-    [Test]
+    [Test, Ignore("Useless for Theta Station")]
     public async Task NoCargoOrderArbitrage()
     {
         await using var pair = await PoolManager.GetServerClient();
@@ -58,7 +58,8 @@ public sealed class CargoTest
 
         await pair.CleanReturnAsync();
     }
-    [Test]
+
+    [Test, Ignore("Useless for Theta Station")]
     public async Task NoCargoBountyArbitrageTest()
     {
         await using var pair = await PoolManager.GetServerClient();
@@ -99,8 +100,12 @@ public sealed class CargoTest
         await pair.CleanReturnAsync();
     }
 
+<<<<<<< HEAD
     [Test]
     [Ignore("Preventing CI tests from failing")] // Frontier: FIXME - unsure which entities are currently failing
+=======
+    [Test, Ignore("Too long for Theta Station")]
+>>>>>>> r1remote/master
     public async Task NoStaticPriceAndStackPrice()
     {
         await using var pair = await PoolManager.GetServerClient();

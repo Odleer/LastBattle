@@ -13,7 +13,12 @@
     DrinkKegWood: 4 # Frontier: kegs
     DrinkKegPlastic: 4 # Frontier: kegs
     CustomDrinkJug: 2 #to allow for custom drinks in the soda/booze dispensers
+<<<<<<< HEAD
     DrinkAbsintheBottleFull: 1
+=======
+    DrinkCampariBottleFull: 5 # Corvax
+    DrinkAbsintheBottleFull: 2
+>>>>>>> r1remote/master
     DrinkAleBottleFull: 5
     DrinkBeerBottleFull: 5
     DrinkBlueCuracaoBottleFull: 2

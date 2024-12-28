@@ -1,4 +1,5 @@
 <Document>
+<<<<<<< HEAD
   # Antagonists
   Antagonists are the driving force of every shift.
   They are the catalysts for chaos, conflict and mystery in Space Station 14 that also serve to provide a challenge to Nanotrasen and its [color=#cb0000]Security[/color] force.
@@ -15,4 +16,16 @@
   - [textlink="Space Ninjas" link="SpaceNinja"], masters of espionage and sabotage with special gear.
   - [textlink="Thieves" link="Thieves"] driven by kleptomania, determined to get their fix using their special gloves.
   - [textlink="Various non-humanoid creatures" link="MinorAntagonists"] that generally attack anything that moves.
+=======
+  # Антагонисты
+
+  Антагонисты - движущая сила каждой смены, обычно они создают конфликт и бросают вызов экипажу. Их цели могут быть самыми разными, но обычно они требуют воровства, саботажа или убийства.
+
+  ## Различные антагонисты
+
+  Антагонисты могут принимать различные формы, например:
+  - Ядерные оперативники, цель которых - проникнуть на станцию и уничтожить её.
+  - Предатели, проникающие в экипаж, которые могут совершать покушения и красть ценные вещи.
+  - Несколько негуманоидных существ, которые обычно просто пытаются уничтожить как можно больше членов экипажа.
+>>>>>>> r1remote/master
 </Document>

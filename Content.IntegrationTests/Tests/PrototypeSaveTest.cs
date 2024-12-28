@@ -68,7 +68,7 @@ public sealed class PrototypeSaveTest
             if (!prototype.MapSavable)
                 continue;
 
-            if (prototype.SetSuffix == "DEBUG")
+            if (prototype.SetSuffix == "DEBUG" || prototype.SetSuffix == "ShipEvent")
                 continue;
 
             prototypes.Add(prototype);

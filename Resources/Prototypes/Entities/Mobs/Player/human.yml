@@ -11,6 +11,7 @@
   name: syndicate agent
   suffix: Human, Base
   components:
+<<<<<<< HEAD
   - type: RandomHumanoidAppearance
     randomizeName: false
     hair: HairBald
@@ -22,6 +23,20 @@
   - type: NpcFactionMember
     factions:
     - Syndicate
+=======
+    - type: RandomHumanoidAppearance
+      randomizeName: false
+      hair: HairBald
+    - type: Loadout
+      prototypes: [SyndicateOperativeGearExtremelyBasic]
+    - type: RandomMetadata
+      nameSegments: # Corvax-MRP
+      - names_first_male
+      - names_last_male
+    - type: NpcFactionMember
+      factions:
+      - Syndicate
+>>>>>>> r1remote/master
 
 - type: entity
   parent: MobHumanSyndicateAgentBase

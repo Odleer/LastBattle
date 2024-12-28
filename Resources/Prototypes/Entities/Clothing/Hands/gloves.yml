@@ -233,6 +233,7 @@
   - type: ToggleClothing
     action: ActionToggleNinjaGloves
   - type: NinjaGloves
+<<<<<<< HEAD
     abilities:
     - components:
       - type: BatteryDrainer
@@ -255,6 +256,16 @@
     # - objective: MassArrestObjective # Frontier
     #   components: # Frontier
     #   - type: CriminalRecordsHacker # Frontier
+=======
+# Corvax-HiddenDesc-Start
+  - type: HiddenDescription
+    entries:
+    - label: corvax-hidden-desc-ThievingGloves-thief
+      whitelistMind:
+        components:
+          - ThiefRole
+# Corvax-HiddenDesc-End
+>>>>>>> r1remote/master
 
 - type: entity
   parent: [ ClothingHandsGlovesColorBlack, BaseC1Contraband ] # BaseSecurityEngineeringContraband<BaseC1Contraband
@@ -369,7 +380,23 @@
   - type: Thieving
     stripTimeReduction: 1.5
     stealthy: true
+<<<<<<< HEAD
   - type: FingerprintMask # Frontier
+=======
+# Corvax-HiddenDesc-Start
+  - type: HiddenDescription
+    entries:
+    - label: corvax-hidden-desc-ThievingGloves-syndicate
+      whitelistMind:
+        components:
+          - TraitorRole
+          - NukeOperative
+    - label: corvax-hidden-desc-ThievingGloves-thief
+      whitelistMind:
+        components:
+          - ThiefRole
+# Corvax-HiddenDesc-End
+>>>>>>> r1remote/master
 
 - type: entity
   parent: ClothingHandsGlovesColorWhite

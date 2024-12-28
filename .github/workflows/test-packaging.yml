@@ -1,22 +1,8 @@
 ﻿name: Test Packaging
 
 on:
-  push:
-    branches: [ master, staging, trying ]
-    paths:
-      - '**.cs'
-      - '**.csproj'
-      - '**.sln'
-      - '**.git**'
-      - '**.yml'
-      # no docs on which one of these is supposed to work, so
-      # why not just do both
-      - 'RobustToolbox'
-      - 'RobustToolbox/**'
-  merge_group:
-  pull_request:
-    types: [ opened, reopened, synchronize, ready_for_review ]
-    branches: [ master ]
+  pull_request_review:
+    types: [submitted]
     paths:
       - '**.cs'
       - '**.csproj'
@@ -29,8 +15,8 @@ on:
 jobs:
   build:
     name: Test Packaging
-    if: github.actor != 'PJBot' && github.event.pull_request.draft == false
-    runs-on: ubuntu-latest
+    if: github.event.pull_request.base.ref == 'master' && github.actor != 'IanComradeBot' && github.event.pull_request.draft == false && github.event.review.state == 'approved'
+    runs-on: [self-hosted, linux, x64]
 
     steps:
       - name: Checkout Master
@@ -48,6 +34,20 @@ jobs:
           cd RobustToolbox/
           git submodule update --init --recursive
 
+      # Corvax-Secrets-Start
+      - name: Setup secrets
+        env:
+          SSH_KEY: ${{ secrets.SECRETS_PRIVATE_KEY }}
+        if: ${{ env.SSH_KEY != '' }}
+        run: |
+          mkdir ~/.ssh
+          echo "${{ secrets.SECRETS_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          echo "HOST *" > ~/.ssh/config
+          echo "StrictHostKeyChecking no" >> ~/.ssh/config
+          git -c submodule.Secrets.update=checkout submodule update --init
+      # Corvax-Secrets-End
+
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v3.2.0
         with:
@@ -64,3 +64,16 @@ jobs:
 
       - name: Package client
         run: dotnet run --project Content.Packaging client --no-wipe-release
+<<<<<<< HEAD
+=======
+
+      - name: Update Build Info
+        env:
+          FORK_ID: ${{ vars.FORK_ID }}
+        run: Tools/gen_build_info.py
+
+      - name: Shuffle files around
+        run: |
+          mkdir "release/${{ github.sha }}"
+          mv release/*.zip "release/${{ github.sha }}"
+>>>>>>> r1remote/master

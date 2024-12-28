@@ -172,6 +172,7 @@
   id: MaintenanceFluffSpawner
   parent: MarkerBase
   components:
+<<<<<<< HEAD
   - type: Sprite
     layers:
       - state: red
@@ -181,6 +182,145 @@
     table: !type:NestedSelector
       tableId: MaintFluffTable
       prob: 0.6
+=======
+    - type: Sprite
+      layers:
+        - state: red
+        - sprite: Clothing/Eyes/Glasses/gar.rsi
+          state: icon-super
+    - type: RandomSpawner
+      rarePrototypes:
+        - ClothingUniformJumpsuitFamilyGuy
+        - CigarGold
+        - ClothingNeckCloakHerald
+        - ClothingHeadHelmetTemplar
+        - ClothingNeckCloakTrans
+        - ClothingNeckCloakAdmin
+        - ClothingNeckCloakMoth
+        - ClothingNeckCloakVoid
+        - ClothingNeckCloakGoliathCloak
+        - ClothingNeckCloakAce
+        - ClothingNeckCloakAro
+        - ClothingNeckCloakBi
+        - ClothingNeckCloakIntersex
+        - ClothingNeckCloakLesbian
+        - ClothingNeckCloakGay
+        - ClothingNeckCloakEnby
+        - ClothingNeckCloakPan
+        - ToySkeleton
+        - Basketball
+        - Football
+        - BalloonCorgi
+        - BalloonNT
+        - PonderingOrb
+        - Skub
+        - DrinkMugDog
+        - ClothingNeckLGBTPin
+        - ClothingNeckAromanticPin
+        - ClothingNeckAsexualPin
+        - ClothingNeckBisexualPin
+        - ClothingNeckIntersexPin
+        - ClothingNeckLesbianPin
+        - ClothingNeckNonBinaryPin
+        - ClothingNeckPansexualPin
+        - ClothingNeckTransPin
+        # Corvax-Pins-Start
+        - ClothingNeckUSSPPin
+        - ClothingNeckDonkPin
+        - ClothingNeckEarthPin
+        - ClothingNeckLogistikaPin
+        - ClothingNeckDeForestPin
+        - ClothingNeckNakamuraPin
+        - ClothingNeckNanoTrasenPin
+        - ClothingNeckSyndicakePin
+        - ClothingNeckVitezstviPin
+        # Corvax-Pins-End
+        - CluwneHorn
+        - ClothingMaskRat
+        - MysteryFigureBox
+        - ClothingHandsGlovesMercFingerless
+        - ClothingHandsGlovesNitrile
+        - ClothingHandsGlovesPowerglove
+        - ClothingHeadHatAnimalHeadslime
+        - ClothingHeadHatBeretMerc
+        - ClothingHeadHatOutlawHat
+        - ClothingHeadHatUshanka
+        - ClothingHeadHatBunny
+        - ClothingMaskNeckGaiter
+        - ClothingNeckScarfStripedZebra
+        - ClothingOuterRobesCult
+        - ClothingOuterGhostSheet
+        - ClothingShoesCult
+        - ClothingUniformJumpsuitAncient
+        - ClothingUniformJumpsuitPirate
+        - ClothingShoesBootsCowboyFancy
+        - ClothingHeadHatCowboyBountyHunter
+        - ClothingNeckAutismPin
+        - ClothingNeckGoldAutismPin
+      rareChance: 0.01
+      prototypes:
+        - Lighter
+        - CigCartonBlue
+        - ClothingEyesGlassesGarGiga
+        - ClothingEyesGlassesGarOrange
+        - ClothingEyesGlassesGar
+        - ClothingHeadHatCake
+        - ClothingHeadHatSkub
+        - ClothingHeadHatCone
+        - ClothingNeckBling
+        - ClothingHeadHelmetCosmonaut
+        - ClothingHeadHelmetBasic
+        - ClothingShoeSlippersDuck
+        - ClothingUnderSocksBee
+        - ClothingUnderSocksCoder
+        - ClothingHeadHatSquid
+        - ClothingMaskFox
+        - ClothingMaskBee
+        - ClothingMaskBear
+        - ClothingMaskRaven
+        - ClothingMaskJackal
+        - ClothingMaskBat
+        - ClothingBeltSuspenders
+        - ClothingEyesEyepatch
+        - ClothingEyesGlasses
+        - ClothingHandsGlovesLatex
+        - ClothingHandsGlovesFingerless
+        - ClothingHandsGlovesColorBlack
+        - ClothingHeadHatBeret
+        - ClothingHeadHatBowlerHat
+        - ClothingHeadHatFedoraBrown
+        - ClothingHeadHatFedoraGrey
+        - ClothingHeadHatFez
+        - ClothingHeadHatPaper
+        - ClothingHeadHatPirate
+        - ClothingHeadHatPirateTricord
+        - ClothingHeadHatTophat
+        - ClothingMaskSterile
+        - ClothingNeckHeadphones
+        - ClothingNeckTieRed
+        - ClothingOuterCoatGentle
+        - ClothingOuterCoatJensen
+        - ClothingEyesGlassesJensen
+        - ClothingOuterCoatLab
+        - ClothingOuterCoatPirate
+        - ClothingOuterHoodieBlack
+        - ClothingOuterHoodieGrey
+        - ClothingOuterFlannelRed
+        - ClothingOuterFlannelBlue
+        - ClothingOuterFlannelGreen
+        - ClothingOuterVestHazard
+        - ClothingShoesBootsJack
+        - ClothingShoesHighheelBoots
+        - ClothingShoesBootsLaceup
+        - ClothingShoesLeather
+        - ClothingShoesBootsSalvage
+        - ClothingShoesBootsWork
+        - ClothingShoesTourist
+        - ClothingUniformJumpsuitLoungewear
+        - ClothingHeadHatCowboyRed
+      chance: 0.6
+      offset: 0.0
+>>>>>>> r1remote/master
 
 - type: entityTable
   id: MaintToolsTable

@@ -101,8 +101,13 @@ JobMedicalIntern = Medical intern
 JobMime = Mime
 JobMusician = Musician
 JobParamedic = Paramedic
+<<<<<<< HEAD
 # Frontier: Passenger<Contractor
 JobPassenger = Contractor
+=======
+JobPassenger = Passenger
+JobImmortalAssistant = Passenger
+>>>>>>> r1remote/master
 JobPsychologist = Psychologist
 JobQuartermaster = Quartermaster
 JobReporter = Reporter

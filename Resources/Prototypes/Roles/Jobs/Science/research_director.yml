@@ -5,8 +5,16 @@
   playTimeTracker: JobResearchDirector
   setPreference: false # Frontier
   requirements:
+<<<<<<< HEAD
     - !type:OverallPlaytimeRequirement
       time: 144000 #40 hrs
+=======
+    - !type:DepartmentTimeRequirement
+      department: Science
+      time: 54000 #15 hrs # Corvax-RoleTime
+#    - !type:OverallPlaytimeRequirement
+#      time: 144000 #40 hrs
+>>>>>>> r1remote/master
   weight: 10
   startingGear: ResearchDirectorGear
   icon: "JobIconResearchDirector"

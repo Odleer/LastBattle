@@ -19,16 +19,24 @@
           availableJobs:
             #service
             Captain: [ 1, 1 ]
+            IAA: [ 1, 1 ] # Corvax-IAA
             HeadOfPersonnel: [ 1, 1 ]
             Bartender: [ 2, 2 ]
             Botanist: [ 3, 3 ]
             Chef: [ 2, 2 ]
             Janitor: [ 3, 3 ]
+<<<<<<< HEAD:Resources/Prototypes/Maps/cog.yml
             Chaplain: [ 1, 1 ]
             Reporter: [ 2, 2 ]
             Librarian: [ 1, 1 ]
             ServiceWorker: [ 3, 3 ]
             Zookeeper: [ 1, 1 ] 
+=======
+            Chaplain: [ 2, 2 ]
+            Librarian: [ 2, 2 ]
+            #Lawyer: [ 2, 2 ] # Corvax-IAA
+            ServiceWorker: [ 3, 4 ]
+>>>>>>> r1remote/master:Resources/Prototypes/Maps/origin.yml
             #engineering
             ChiefEngineer: [ 1, 1 ]
             AtmosphericTechnician: [ 3, 3 ]

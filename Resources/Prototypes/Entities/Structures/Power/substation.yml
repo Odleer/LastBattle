@@ -28,8 +28,13 @@
   - type: ExaminableBattery
   - type: PointLight
     radius: 1.5
+<<<<<<< HEAD
     energy: 1.6
     color: "#3db83b"
+=======
+    energy: 1
+    color: "#34e06d" # Corvax-Resprite
+>>>>>>> r1remote/master
     castShadows: false
   - type: NodeContainer
     examinable: true
@@ -131,8 +136,13 @@
       path: /Audio/Ambience/Objects/buzzing.ogg
   - type: PointLight
     radius: 1.5
+<<<<<<< HEAD
     energy: 1.6
     color: "#3db83b"
+=======
+    energy: 1
+    color: "#34e06d" # Corvax-Resprite
+>>>>>>> r1remote/master
     netsync: false
     castShadows: false
   - type: Clickable

@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 - type: entity
   parent: [ClothingShoesBase, BaseToggleClothing]
   id: ClothingShoesBootsMagBase
+=======
+﻿- type: entity
+  parent: ClothingShoesBase
+  id: ClothingShoesBootsMag
+>>>>>>> r1remote/master
   name: magboots
   description: Magnetic boots, often used during extravehicular activity to ensure the user remains safely attached to the vehicle.
   abstract: true
@@ -73,7 +79,18 @@
     sprite: Clothing/Shoes/Boots/magboots-science.rsi
 
 - type: entity
+<<<<<<< HEAD
   parent: ClothingShoesBootsMagBase
+=======
+  parent: ClothingShoesBootsMagAdv
+  id: ClothingShoesBootsMagAdvOn
+  components:
+    - type: Magboots
+      on: true
+
+- type: entity
+  parent: ClothingShoesBootsMag
+>>>>>>> r1remote/master
   id: ClothingShoesBootsMagBlinding
   name: magboots of blinding speed
   description: These would look fetching on a fetcher like you.

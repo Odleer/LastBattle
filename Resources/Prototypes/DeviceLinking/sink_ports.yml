@@ -99,6 +99,7 @@
   description: signal-port-description-logic-input
 
 - type: sinkPort
+<<<<<<< HEAD
   id: MemoryInput
   name: signal-port-name-logic-input
   description: signal-port-description-logic-memory-input
@@ -107,6 +108,21 @@
   id: MemoryEnable
   name: signal-port-name-logic-enable
   description: signal-port-description-logic-enable
+=======
+  id: B2
+  name: "Input B2"
+  description: "Input B2"
+  
+- type: sinkPort
+  id: CannonConsoleReceiver
+  name: "Cannon console receiver"
+  description: "Cannon console receiver"
+  
+- type: sinkPort
+  id: CircularShieldConsoleReceiver
+  name: "Circular shield console receiver"
+  description: "Circular shield console receiver"
+>>>>>>> r1remote/master
 
 - type: sinkPort
   id: SetParticleDelta

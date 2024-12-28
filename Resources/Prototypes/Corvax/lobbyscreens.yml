@@ -1,0 +1,19 @@
+﻿- type: lobbyBackground
+  id: DeadInSpace
+  background: /Textures/Corvax/LobbyScreens/dead-in-space.png
+
+- type: lobbyBackground
+  id: IntoSpace
+  background: /Textures/Corvax/LobbyScreens/into-space.png
+
+- type: lobbyBackground
+  id: Lofi
+  background: /Textures/Corvax/LobbyScreens/lofi.png
+
+- type: lobbyBackground
+  id: Singulord
+  background: /Textures/Corvax/LobbyScreens/singulord.png
+
+- type: lobbyBackground
+  id: SpaceMudaki
+  background: /Textures/Corvax/LobbyScreens/space-mudaki.png

@@ -24,9 +24,17 @@
       allowNonHumans: true
       multiAntagSetting: NotExclusive
       startingGear: ThiefGear
+<<<<<<< HEAD
       components:
       - type: Pacified
       mindRoles:
       - MindRoleThief
+=======
+#      components: # Corvax-MRP
+#      - type: Pacified
+      mindComponents:
+      - type: ThiefRole
+        prototype: Thief
+>>>>>>> r1remote/master
       briefing:
         sound: "/Audio/Misc/thief_greeting.ogg"

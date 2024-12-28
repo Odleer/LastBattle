@@ -612,8 +612,26 @@
         type: AgentIDCardBoundUserInterface
       enum.ChameleonUiKey.Key:
         type: ChameleonBoundUserInterface
+<<<<<<< HEAD
   - type: Contraband # Frontier
     hideValues: true # Frontier
+=======
+# Corvax-HiddenDesc-Start
+  - type: HiddenDescription
+    entries:
+    - label: corvax-hidden-desc-AgentIDCard-syndicate
+      whitelistMind:
+        components:
+          - TraitorRole
+          - NukeOperative
+    - label: corvax-hidden-desc-AgentIDCard-research
+      jobRequired:
+        - ResearchAssistant
+        - ResearchDirector
+        - Scientist
+        - Borg
+# Corvax-HiddenDesc-End
+>>>>>>> r1remote/master
 
 - type: entity
   name: contractor ID card # Frontier: passenger<contractor

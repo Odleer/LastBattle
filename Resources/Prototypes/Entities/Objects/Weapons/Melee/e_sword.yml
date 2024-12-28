@@ -72,7 +72,27 @@
   - type: Reflect
   - type: IgnitionSource
     temperature: 700
-
+# Corvax-HiddenDesc-Start
+  - type: HiddenDescription
+    entries:
+    - label: corvax-hidden-desc-EnergySword-syndicate
+      whitelistMind:
+        components:
+          - TraitorRole
+          - NukeOperative
+    - label: corvax-hidden-desc-EnergySword-security
+      jobRequired:
+        - HeadOfSecurity
+        - Detective
+        - SecurityCadet
+        - SecurityOfficer
+        - Warden
+        - Captain
+    - label: corvax-hidden-desc-EnergySword-cargo
+      jobRequired:
+        - SalvageSpecialist
+# Corvax-HiddenDesc-End
+        
 - type: entity
   name: energy sword
   parent: [BaseMeleeWeaponEnergy, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
@@ -224,9 +244,30 @@
   - type: Tag
     tags:
     - Write
+<<<<<<< HEAD
   - type: Contraband # Frontier
     hideValues: true # Frontier
 
+=======
+  - type: DisarmMalus
+    malus: 0
+# Corvax-HiddenDesc-Start
+  - type: HiddenDescription
+    entries:
+    - label: corvax-hidden-desc-EnergyDagger-syndicate
+      whitelistMind:
+        components:
+          - TraitorRole
+          - NukeOperative
+    - label: corvax-hidden-desc-EnergyDagger-research
+      jobRequired:
+        - ResearchAssistant
+        - ResearchDirector
+        - Scientist
+        - Borg
+# Corvax-HiddenDesc-End
+          
+>>>>>>> r1remote/master
 - type: entity
   parent: [BaseItem, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
   id: EnergyDaggerBox
@@ -268,7 +309,36 @@
         map: [ "blade" ]
   - type: Item
     sprite: Objects/Weapons/Melee/e_cutlass.rsi
+<<<<<<< HEAD
 
+=======
+  - type: ToggleableLightVisuals
+    spriteLayer: blade
+    inhandVisuals:
+      left:
+      - state: inhand-left-blade
+        shader: unshaded
+      right:
+      - state: inhand-right-blade
+        shader: unshaded
+# Corvax-HiddenDesc-Start
+  - type: HiddenDescription
+    entries:
+    #- label: corvax-hidden-desc-EnergyCutlass-pirate #У нас нету в игре PirateRole, грусть
+    - label: corvax-hidden-desc-EnergyCutlass-security
+      jobRequired:
+        - HeadOfSecurity
+        - Detective
+        - SecurityCadet
+        - SecurityOfficer
+        - Warden
+        - Captain
+    - label: corvax-hidden-desc-EnergyCutlass-cargo
+      jobRequired:
+        - SalvageSpecialist
+# Corvax-HiddenDesc-End
+        
+>>>>>>> r1remote/master
 - type: entity
   name: double-bladed energy sword
   parent: [BaseMeleeWeaponEnergy, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
@@ -332,6 +402,7 @@
   - type: Reflect
     reflectProb: .75
     spread: 75
+<<<<<<< HEAD
 
 - type: entity
   suffix: One-Handed, For Borgs
@@ -341,3 +412,36 @@
   components: # could add energy-draining like the L6C
   - type: Wieldable
     freeHandsRequired: 0 # because borg has no off-hand to wield with.  Without this, it will be unable to activate the esword
+=======
+  - type: UseDelay
+    delay: 1
+  - type: ToggleableLightVisuals
+    spriteLayer: blade
+    inhandVisuals:
+      left:
+      - state: inhand-left-blade
+        shader: unshaded
+      right:
+      - state: inhand-right-blade
+        shader: unshaded
+# Corvax-HiddenDesc-Start
+  - type: HiddenDescription
+    entries:
+    - label: corvax-hidden-desc-EnergySword-syndicate
+      whitelistMind:
+        components:
+          - TraitorRole
+          - NukeOperative
+    - label: corvax-hidden-desc-EnergySword-security
+      jobRequired:
+        - HeadOfSecurity
+        - Detective
+        - SecurityCadet
+        - SecurityOfficer
+        - Warden
+        - Captain
+    - label: corvax-hidden-desc-EnergySword-cargo
+      jobRequired:
+        - SalvageSpecialist
+# Corvax-HiddenDesc-End
+>>>>>>> r1remote/master

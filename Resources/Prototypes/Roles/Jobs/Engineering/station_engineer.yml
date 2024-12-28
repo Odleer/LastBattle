@@ -5,8 +5,14 @@
   playTimeTracker: JobStationEngineer
   setPreference: false # Frontier
   requirements:
+<<<<<<< HEAD
     - !type:OverallPlaytimeRequirement
       time: 10800
+=======
+    - !type:DepartmentTimeRequirement
+      department: Engineering
+      time: 18000 #5 hrs # Corvax-RoleTime
+>>>>>>> r1remote/master
   startingGear: StationEngineerGear
   icon: "JobIconStationEngineer"
   supervisors: job-supervisors-hire # Frontier

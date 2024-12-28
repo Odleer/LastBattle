@@ -34,6 +34,13 @@
   storage:
     back:
     - PlushieLizard
+<<<<<<< HEAD
+=======
+
+- type: loadout
+  id: PlushieSpaceLizard
+  equipment: PlushieSpaceLizard
+>>>>>>> r1remote/master
 
 - type: loadout
   id: PlushieSpaceLizard

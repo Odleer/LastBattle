@@ -1,0 +1,29 @@
+name: "Bug report"
+description: "If something does not work as expected."
+labels: ["Bug"]
+body:
+  - type: textarea
+    id: description
+    validations:
+      required: true
+    attributes:
+      label: "Description"
+      description: "Describe the problem in details."
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: "Reproduction steps"
+      description: "If possible, describe steps for reproducing the problem."
+      placeholder: |
+        1. Open console interface
+        2. Press start button
+        3. Get error
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: "Screenshots"
+      description: |
+        If possible, add screenshots to make problem clearer.
+        **Tip**: You can add images by clicking area below to select it and then dragging files inside.

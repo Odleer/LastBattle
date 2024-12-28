@@ -73,7 +73,7 @@
     availableModes:
     - FullAuto
     soundGunshot:
-      path: /Audio/Weapons/Guns/Gunshots/shotgun.ogg
+      path: /Audio/Corvax/Weapons/Guns/Gunshots/shotgun_auto.ogg # Corvax-Guns
     soundEmpty:
       path: /Audio/Weapons/Guns/Empty/empty.ogg
   - type: ItemSlots
@@ -150,8 +150,14 @@
     sprite: Objects/Weapons/Guns/Shotguns/enforcer_inhands_64x.rsi
   - type: BallisticAmmoProvider
   - type: GunRequiresWield #remove when inaccuracy on spreads is fixed
+<<<<<<< HEAD
   - type: PirateBountyItem # Frontier
     id: Enforcer # Frontier
+=======
+  - type: Gun # Corvax-Guns
+    soundGunshot:
+      path: /Audio/Corvax/Weapons/Guns/Gunshots/shotgun_metal.ogg
+>>>>>>> r1remote/master
 
 - type: entity
   parent: WeaponShotgunEnforcer
@@ -160,6 +166,9 @@
   components:
   - type: BallisticAmmoProvider
     proto: ShellShotgunBeanbag
+  - type: Gun # Corvax-Guns
+    soundGunshot:
+      path: /Audio/Corvax/Weapons/Guns/Gunshots/shotgun_metal.ogg
 
 - type: entity
   name: Kammerer
@@ -182,6 +191,9 @@
   - type: Tag
     tags:
     - WeaponShotgunKammerer
+  - type: Gun # Corvax-Guns
+    soundGunshot:
+      path: /Audio/Corvax/Weapons/Guns/Gunshots/shotgun_alt.ogg
 
 - type: entity
   name: sawn-off shotgun
@@ -198,6 +210,8 @@
     sprite: Objects/Weapons/Guns/Shotguns/sawn_inhands_64x.rsi
   - type: Gun
     fireRate: 4
+    soundGunshot: # Corvax-Guns
+      path: /Audio/Corvax/Weapons/Guns/Gunshots/shotgun_sawed.ogg
   - type: BallisticAmmoProvider
     capacity: 2
   - type: Construction
@@ -233,6 +247,8 @@
     sprite: Objects/Weapons/Guns/Shotguns/hm_pistol.rsi
   - type: Gun
     fireRate: 4
+    soundGunshot: # Corvax-Guns
+      path: /Audio/Corvax/Weapons/Guns/Gunshots/shotgun_pipe.ogg
   - type: BallisticAmmoProvider
     capacity: 1
   - type: Construction

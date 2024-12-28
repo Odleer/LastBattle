@@ -92,6 +92,18 @@
     layers:
       - state: green
       - state: passenger
+          
+- type: entity
+  id: SpawnPointAssistantGodmode
+  parent: SpawnPointJobBase
+  name: passenger godmode
+  components:
+    - type: SpawnPoint
+      job_id: PassengerGodmode
+    - type: Sprite
+      layers:
+        - state: green
+        - state: passenger
 
 - type: entity
   id: SpawnPointTechnicalAssistant
@@ -256,7 +268,7 @@
   categories: [ HideSpawnMenu ] # Frontier
   components:
   - type: SpawnPoint
-    job_id: Lawyer
+    job_id: IAA # Corvax-IAA: Lawyer replaced with IAA
   - type: Sprite
     layers:
       - state: green

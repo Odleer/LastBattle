@@ -3,7 +3,7 @@
   abstract: true
   priority: 3
   offset: 1
-  locationPreference: Right
+  locationPreference: Left # Corvax-TypingIndicator
   isShaded: true
 
 - type: securityIcon

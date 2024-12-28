@@ -10,6 +10,7 @@
     - Moth
     - Reptilian
     - SlimePerson
+<<<<<<< HEAD
     - Vox
     - Goblin # Frontier
     - Vulpkanin # DeltaV
@@ -17,6 +18,9 @@
     - Felinid # DeltaV
     - Oni # DeltaV
 #    - Rodentia # DeltaV
+=======
+    - Vulpkanin # Corvax
+>>>>>>> r1remote/master
 
 - type: guideEntry
   id: Arachnid

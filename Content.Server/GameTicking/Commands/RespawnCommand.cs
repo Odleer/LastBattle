@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 using System.Linq;
 using Content.Server.Administration;
 using Content.Server.Mind;
+=======
+using Content.Server.Administration;
+using Content.Shared.Mind;
+>>>>>>> r1remote/master
 using Content.Shared.Players;
 using Robust.Server.Player;
 using Robust.Shared.Console;
@@ -8,7 +13,12 @@ using Robust.Shared.Network;
 
 namespace Content.Server.GameTicking.Commands
 {
+<<<<<<< HEAD
     sealed class RespawnCommand : LocalizedEntityCommands
+=======
+    [AdminCommand(Shared.Administration.AdminFlags.Admin)]
+    sealed class RespawnCommand : IConsoleCommand
+>>>>>>> r1remote/master
     {
         [Dependency] private readonly IPlayerManager _player = default!;
         [Dependency] private readonly IPlayerLocator _locator = default!;

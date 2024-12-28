@@ -5,8 +5,22 @@
   playTimeTracker: JobChiefEngineer
   setPreference: false # Frontier
   requirements:
+<<<<<<< HEAD
     - !type:OverallPlaytimeRequirement
       time: 144000 #40 hrs
+=======
+    - !type:RoleTimeRequirement
+      role: JobAtmosphericTechnician
+      time: 36000 #10 hrs # Corvax-RoleTime
+#    - !type:RoleTimeRequirement
+#      role: JobStationEngineer
+#      time: 21600 #6 hrs
+    - !type:DepartmentTimeRequirement
+      department: Engineering
+      time: 54000 #15 hrs # Corvax-RoleTime
+#    - !type:OverallPlaytimeRequirement
+#      time: 144000 #40 hrs
+>>>>>>> r1remote/master
   weight: 10
   startingGear: ChiefEngineerGear
   icon: "JobIconChiefEngineer"

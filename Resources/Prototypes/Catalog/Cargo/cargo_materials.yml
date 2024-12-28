@@ -69,7 +69,7 @@
   abstract: true # Frontier
   icon:
     sprite: Objects/Materials/Sheets/other.rsi
-    state: plasma_3
+    state: plasma # Corvax-Resprite
   product: CrateMaterialPlasma
   cost: 3000 # Frontier: 2000<3000
   category: cargoproduct-category-name-materials

@@ -28,6 +28,17 @@
     - yells
     - yelled
     - yelling
+    # Corvax-Localization-Start
+    - кричит
+    - кричит.
+    - кричит!
+    - орёт
+    - орёт.
+    - орёт!
+    - визжит
+    - визжит.
+    - визжит!
+    # Corvax-Localization-End
 
 - type: emote
   id: Laugh
@@ -57,7 +68,29 @@
     - chortle
     - chortles
     - chortling
+<<<<<<< HEAD
     - chortled # Frontier
+=======
+    - chortling.
+    - chortling!
+    # Corvax-Localization-Start
+    - смеется
+    - смеется.
+    - смеется!
+    - смеётся
+    - смеётся.
+    - смеётся!
+    - хохочет
+    - хохочет.
+    - хохочет!
+    - хихикает
+    - хихикает.
+    - хихикает!
+    - хихикнул
+    - хихикнула
+    - ржёт
+    # Corvax-Localization-End
+>>>>>>> r1remote/master
 
 - type: emote
   id: Honk
@@ -75,6 +108,16 @@
     - honks
     - honked
     - honking
+<<<<<<< HEAD
+=======
+    - honking.
+    - honking!
+    # Corvax-Localization-Start
+    - хонк
+    - хонк.
+    - хонк!
+    # Corvax-Localization-End
+>>>>>>> r1remote/master
 
 - type: emote
   id: Sigh
@@ -92,7 +135,21 @@
     - sigh
     - sighs
     - sighed
+<<<<<<< HEAD
     - sighing # Frontier
+=======
+    - sigh.
+    - sighs.
+    - sighed.
+    # Corvax-Localization-Start
+    - вздыхает
+    - вздыхает.
+    - вздохнул
+    - вздохнула
+    - вздохнул.
+    - вздохнула.
+    # Corvax-Localization-End
+>>>>>>> r1remote/master
 
 - type: emote
   id: Whistle
@@ -110,7 +167,20 @@
     - whistle
     - whistles
     - whistleblowing
+<<<<<<< HEAD
     - whistled # Frontier
+=======
+    - whistleblowing.
+    - whistleblowing!
+    # Corvax-Localization-Start
+    - свистит
+    - свистит.
+    - свистит!
+    - свистнул
+    - свистнул.
+    - свистнул!
+    # Corvax-Localization-End
+>>>>>>> r1remote/master
 
 - type: emote
   id: Crying
@@ -131,8 +201,21 @@
     - sob
     - sobs
     - sobbing
+<<<<<<< HEAD
     - sobbed # Frontier
     - cried # Frontier
+=======
+    - sobbing.
+    - sobbing!
+    # Corvax-Localization-Start
+    - плачет
+    - плачет.
+    - плачет!
+    - рыдает
+    - рыдает.
+    - рыдает!
+    # Corvax-Localization-End
+>>>>>>> r1remote/master
 
 - type: emote
   id: Squish
@@ -151,7 +234,17 @@
     - squish
     - squishing
     - squishes
+<<<<<<< HEAD
     - squished # Frontier
+=======
+    - squishes.
+    - squishes!
+    # Corvax-Localization-Start
+    - хлюпает
+    - хлюпает.
+    - хлюпает!
+    # Corvax-Localization-End
+>>>>>>> r1remote/master
 
 - type: emote
   id: Chitter
@@ -170,7 +263,17 @@
    - chitter
    - chitters
    - chittered
+<<<<<<< HEAD
    - chittering # Frontier
+=======
+   - chittered.
+   - chittered!
+   # Corvax-Localization-Start
+   - стрекочет
+   - стрекочет.
+   - стрекочет!
+   # Corvax-Localization-End
+>>>>>>> r1remote/master
 
 - type: emote
   id: Squeak
@@ -189,7 +292,17 @@
    - squeak
    - squeaks
    - squeaked
+<<<<<<< HEAD
    - squeaking # Frontier
+=======
+   - squeaked.
+   - squeaked!
+   # Corvax-Localization-Start
+   - пищит
+   - пищит.
+   - пищит!
+   # Corvax-Localization-End
+>>>>>>> r1remote/master
 
 - type: emote
   id: Click
@@ -207,8 +320,21 @@
   chatTriggers:
    - click
    - clicks
+<<<<<<< HEAD
    - clicked # Frontier
    - clicking # Frontier
+=======
+   - clicks.
+   - clicks!
+   # Corvax-Localization-Start
+   - клац
+   - клац.
+   - клац!
+   - клацает
+   - клацает.
+   - клацает!
+   # Corvax-Localization-End
+>>>>>>> r1remote/master
 
 # hand emotes
 - type: emote
@@ -228,6 +354,21 @@
     - claps
     - clapping
     - clapped
+    # Corvax-Localization-Start
+    - хлопает
+    - хлопает.
+    - хлопает!
+    - хлопнул
+    - хлопнула
+    - хлопает в ладоши
+    - хлопает в ладоши.
+    - хлопает в ладоши!
+    - хлопнул в ладоши
+    - хлопнула в ладоши
+    - апплодирует
+    - апплодирует.
+    - апплодирует!
+    # Corvax-Localization-End
 
 - type: emote
   id: Snap
@@ -251,6 +392,28 @@
     - snaps their fingers
     - snapping fingers
     - snapped fingers
+    # Corvax-Localization-Start
+    - щелкает
+    - щелкает.
+    - щелкает!
+    - щелкнул
+    - щелкнула
+    - щёлкает
+    - щёлкает.
+    - щёлкает!
+    - щёлкнул
+    - щёлкнула
+    - щелкает пальцами
+    - щелкает пальцами.
+    - щелкает пальцами!
+    - щелкнул пальцами
+    - щелкнула пальцами
+    - щёлкает пальцами
+    - щёлкает пальцами.
+    - щёлкает пальцами!
+    - щёлкнул пальцами
+    - щёлкнула пальцами
+    # Corvax-Localization-End
 
 - type: emote
   id: Thump
@@ -292,8 +455,27 @@
   chatTriggers:
     - salute
     - salutes
+<<<<<<< HEAD
     - saluted # Frontier
     - saluting # Frontier
+=======
+    - salutes.
+    - salutes!
+    # Corvax-Localization-Start
+    - салютует
+    - салютует.
+    - салютует!
+    - отдаёт честь
+    - отдаёт честь.
+    - отдаёт честь!
+    - отдал честь
+    - отдал честь.
+    - отдал честь!
+    - отдала честь
+    - отдала честь.
+    - отдала честь!
+    # Corvax-Localization-End
+>>>>>>> r1remote/master
 
 - type: emote
   id: Gasp
@@ -341,13 +523,29 @@
     - buzz
     - buzzed
     - buzzes
+<<<<<<< HEAD
+=======
+    - buzzes.
+    - buzzes!
+    # Corvax-Localization-Start
+    - жужжит!
+    - жужжит.
+    - жужжит
+    - зажужжал
+    - зажужжал.
+    - зажужжал!
+    - зажужжала
+    - зажужжала.
+    - зажужжала!
+    # Corvax-Localization-End
+>>>>>>> r1remote/master
 
 - type: emote
   id: Weh
   name: chat-emote-name-weh
   category: Vocal
   icon: Interface/Emotes/weh.png
-  chatMessages: [Wehs!]
+  chatMessages: [издаёт вех!]
 
 - type: emote
   id: Chirp
@@ -364,6 +562,16 @@
     - chirps
     - chirped
     - chirping
+<<<<<<< HEAD
+=======
+    - chirping.
+    - chirping!
+    # Corvax-Localization-Start
+    - чирикает
+    - чирикает.
+    - чирикает!
+    # Corvax-Localization-End
+>>>>>>> r1remote/master
 
 # Machine Emotes
 - type: emote
@@ -382,6 +590,16 @@
     - beeps
     - beeped
     - beeping
+<<<<<<< HEAD
+=======
+    - beeping.
+    - beeping!
+    # Corvax-Localization-Start
+    - бип
+    - бип.
+    - бип!
+    # Corvax-Localization-End
+>>>>>>> r1remote/master
 
 - type: emote
   id: Chime
@@ -399,6 +617,16 @@
     - chimes
     - chimed
     - chiming
+<<<<<<< HEAD
+=======
+    - chiming,
+    - chiming!
+    # Corvax-Localization-Start
+    - дзынь
+    - дзынь.
+    - дзынь!
+    # Corvax-Localization-End
+>>>>>>> r1remote/master
 
 - type: emote
   id: Buzz-Two
@@ -422,7 +650,32 @@
     - buzzes twice
     - buzzing twice
     - buzzed twice
+<<<<<<< HEAD
     - buzzedtwice # Frontier
+=======
+    - buzzed twice.
+    - buzzed twice!
+    # Corvax-Localization-Start
+    - бипбуп
+    - бипбуп.
+    - бипбуп!
+    - бип буп
+    - бип буп.
+    - бип буп!
+    - бип-буп
+    - бип-буп.
+    - бип-буп!
+    - бипбип
+    - бипбип.
+    - бипбип!
+    - бип бип
+    - бип бип.
+    - бип бип!
+    - бип-бип
+    - бип-бип.
+    - бип-бип!
+    # Corvax-Localization-End
+>>>>>>> r1remote/master
 
 - type: emote
   id: Ping
@@ -440,3 +693,13 @@
     - pings
     - pinged
     - pinging
+<<<<<<< HEAD
+=======
+    - pinging.
+    - pinging!
+    # Corvax-Localization-Start
+    - пинг
+    - пинг.
+    - пинг!
+    # Corvax-Localization-End
+>>>>>>> r1remote/master

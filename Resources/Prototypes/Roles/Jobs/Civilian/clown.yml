@@ -3,10 +3,16 @@
   name: job-name-clown
   description: job-description-clown
   playTimeTracker: JobClown
+<<<<<<< HEAD
   setPreference: false # Frontier
   requirements:
     - !type:OverallPlaytimeRequirement
       time: 10800
+=======
+  requirements:
+  - !type:OverallPlaytimeRequirement
+      time: 90000 #25 hrs # Corvax-RoleTime
+>>>>>>> r1remote/master
   startingGear: ClownGear
   icon: "JobIconClown"
   supervisors: job-supervisors-hire # Frontier

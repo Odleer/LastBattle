@@ -226,6 +226,7 @@
       "name": "paper_stamp-generic"
     },
     {
+<<<<<<< HEAD
       "name": "paper_stamp-greytide"
     },
     {
@@ -257,6 +258,12 @@
     },
     {
       "name": "paper_stamp-nf-stc"
+=======
+      "name": "paper_stamp-approve"
+    },
+    {
+      "name": "paper_stamp-psychologist"
+>>>>>>> r1remote/master
     }
   ]
 }
